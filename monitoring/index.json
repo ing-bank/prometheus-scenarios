@@ -6,11 +6,11 @@
   "details": {
     "steps": [{
       "title": "Step 1 - Get Familiar with the environment",
+      "courseData": "step1.sh",
       "text": "step1.md"
     }],
     "intro": {
       "text": "intro.md",
-      "courseData": "courseIntro.sh",
       "credits": ""
     },
     "finish": {
@@ -20,7 +20,7 @@
       "master": [
         {
           "file": "deployment.yml",
-          "target": "~/deployment.yml"
+          "target": "/tmp/deployment.yml"
         }
       ]
     }
