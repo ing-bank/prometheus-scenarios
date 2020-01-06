@@ -6,7 +6,7 @@
   "details": {
     "steps": [{
       "title": "Step 1 - Get Familiar with the environment",
-      "code": "step1.sh",
+      "code": "sleep 1; step1.sh",
       "text": "step1.md"
     }],
     "intro": {
