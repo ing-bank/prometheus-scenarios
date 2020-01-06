@@ -31,7 +31,7 @@
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. You can access Grafana via the dashboard link.\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "bash",
+    "imageid": "kubernetes",
     "port": 3000
   }
 }
