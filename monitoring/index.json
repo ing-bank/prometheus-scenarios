@@ -19,8 +19,8 @@
     "assets": {
       "client": [
         {
-          "file": "deployment.yml",
-          "target": "~/"
+          "file": "monitoring/deployment.yml",
+          "target": "~/deployment.yml"
         }
       ]
     }

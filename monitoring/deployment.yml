@@ -21,3 +21,14 @@ spec:
           ports:
             - name: grafana
               containerPort: 3000
+---
+kind: Service
+apiVersion: apps/v1
+metadata:
+  name: grafana-svc
+spec:
+  selector:
+    app: grafana
+  ports:
+    - name: grafana
+      port: 3000
