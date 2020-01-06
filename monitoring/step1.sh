@@ -18,4 +18,4 @@ done
 
 # deploy apps
 echo "Deploying apps"
-kubectl -f deployment.yml
+kubectl apply -f deployment.yml

@@ -17,7 +17,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "master": [
+      "client": [
         {
           "file": "deployment.yml",
           "target": "/tmp/deployment.yml"
