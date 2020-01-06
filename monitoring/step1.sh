@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Wait 3 seconds for katacoda"
+sleep 3
 
 check_k8s_ready() {
   return kubectl get nodes --no-headers | grep "Ready"
