@@ -22,7 +22,20 @@
           "file": "deployment.yml",
           "target": "/tmp/deployment.yml"
         }
+      ],
+      "host01": [
+        {
+          "file": "deployment.yml",
+          "target": "/tmp/deployment.yml"
+        }
+      ],
+      "master": [
+        {
+          "file": "deployment.yml",
+          "target": "/tmp/deployment.yml"
+        }
       ]
+
     }
   },
   "environment": {
