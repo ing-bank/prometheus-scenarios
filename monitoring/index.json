@@ -26,7 +26,7 @@
     }
   },
   "environment": {
-    "showdashboard": true,
+    "showdashboard": false,
     "dashboards": [{"name": "Grafana", "port": 3000}, {"name": "Prometheus", "port": 9090}],
     "uilayout": "terminal-iframe",
     "hideintro": false,
