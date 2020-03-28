@@ -4,4 +4,4 @@ echo "Wait for katacoda"
 sleep 3
 
 echo "Deploying apps..."
-docker compose up
+docker-compose up
