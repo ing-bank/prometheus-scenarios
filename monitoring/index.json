@@ -6,11 +6,11 @@
   "details": {
     "steps": [{
       "title": "Step 1 - Get Familiar with the environment",
-      "code": "step1.sh",
       "text": "step1.md"
     }],
     "intro": {
       "text": "intro.md",
+      "courseData": "env-init.sh",
       "credits": ""
     },
     "finish": {
@@ -41,6 +41,8 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "terminal-iframe",
+    "hideintro": false,
+		"hidefinish": false,
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. You can access Grafana via the dashboard link.\u001b[m\r\n"
   },
   "backend": {

@@ -4,16 +4,13 @@ sleep 3
 
 KCTL="kubectl --kubeconfig=/etc/kubernetes/admin.conf"
 
-check_k8s_ready() {
-  return $KCTL get nodes --no-headers | grep "Ready"
-}
 
 echo "Waiting for kubernetes to start"
 i=0
 while [ $i -lt 10 ]; do
   i=$((i+1))
   echo "Attempt nr $i"
-  [ check_k8s_ready ] && break
+  ($KCTL get nodes --no-headers | grep "Ready") && break
   sleep 2
 done
 
