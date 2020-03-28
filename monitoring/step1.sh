@@ -2,8 +2,10 @@
 echo "Wait 3 seconds for katacoda"
 sleep 3
 
+KCTL="kubectl --kubeconfig=/etc/kubernetes/admin.conf"
+
 check_k8s_ready() {
-  return kubectl get nodes --no-headers | grep "Ready"
+  return $KCTL get nodes --no-headers | grep "Ready"
 }
 
 echo "Waiting for kubernetes to start"
@@ -17,5 +19,4 @@ done
 
 # deploy apps
 echo "Deploying apps"
-export KUBECONFIG="/etc/kubernetes/admin.conf"
-kubectl apply -f /tmp/deployment.yml
+$KCTL apply -f /tmp/deployment.yml
