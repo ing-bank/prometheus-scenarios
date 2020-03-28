@@ -1,0 +1,16 @@
+version: "3.6"
+services:
+  grafana:
+    image: grafana/grafana:6.7.1
+    ports:
+    - "3000:3000"
+  prometheus:
+    image: prom/prometheus:v2.17.1
+    ports:
+    - "9090:9090"
+  alertmanager:
+    image: prom/prometheus:v0.20.0
+    ports:
+    - "9093:9093"
+
+

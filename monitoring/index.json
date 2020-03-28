@@ -10,6 +10,7 @@
     }],
     "intro": {
       "text": "intro.md",
+      "code": "env-init.sh",
       "credits": ""
     },
     "finish": {
@@ -18,8 +19,8 @@
     "assets": {
       "client": [
         {
-          "file": "deployment.yml",
-          "target": "/tmp/deployment.yml"
+          "file": "monitoring-apps.yml",
+          "target": "~/monitoring-apps.yml"
         }
       ],
       "host01": [
