@@ -9,7 +9,7 @@ services:
     ports:
     - "9090:9090"
   alertmanager:
-    image: prom/prometheus:v0.20.0
+    image: prom/alertmanager:v0.20.0
     ports:
     - "9093:9093"
 
