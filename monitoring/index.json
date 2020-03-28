@@ -20,22 +20,9 @@
       "client": [
         {
           "file": "monitoring-apps.yml",
-          "target": "~/monitoring-apps.yml"
-        }
-      ],
-      "host01": [
-        {
-          "file": "deployment.yml",
-          "target": "/tmp/deployment.yml"
-        }
-      ],
-      "master": [
-        {
-          "file": "deployment.yml",
-          "target": "/tmp/deployment.yml"
+          "target": "~/"
         }
       ]
-
     }
   },
   "environment": {
