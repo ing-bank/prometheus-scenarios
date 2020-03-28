@@ -1,21 +1,21 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 echo "Wait for katacoda"
-sleep 10
+sleep 20
 
 mkdir .kube
 while [ ! -f /etc/kubernetes/admin.conf ]; do 
-  echo "Waiting for kubernetes to be installed"
+  echo "Kubernetes is being installed..."
   sleep 2; 
 done
 cp /etc/kubernetes/admin.conf .kube/config
 
-echo "Waiting for kubernetes to start"
 i=0
 while [ $i -lt 30 ]; do
+  echo "Waiting for kubernetes to start..."
   i=$((i+1))
-  echo "Attempt nr $i"
-  (kubectl get nodes --no-headers | grep "Ready" 2>/dev/null) && break
-  sleep 2
+  (kubectl get nodes --no-headers 2>/dev/null | grep -v "NotReady" | grep "Ready" ) && break
+  sleep 3
 done
 
 # deploy apps
