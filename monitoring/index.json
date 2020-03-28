@@ -10,7 +10,7 @@
     }],
     "intro": {
       "text": "intro.md",
-      "code": "env-init.sh",
+      "code": "launch-k8s.sh",
       "credits": ""
     },
     "finish": {
