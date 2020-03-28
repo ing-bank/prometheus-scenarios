@@ -10,7 +10,6 @@
     }],
     "intro": {
       "text": "intro.md",
-      "code": "launch-k8s.sh",
       "credits": ""
     },
     "finish": {
@@ -46,7 +45,7 @@
     "uimessage1": "\u001b[32mThis is your interactive bash terminal. The environment is getting reeady, don't refresh the page!\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "kubernetes-cluster",
+    "imageid": "docker",
     "port": 3000
   }
 }
