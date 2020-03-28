@@ -17,7 +17,7 @@ while [ $i -lt 30 ]; do
   (kubectl get nodes --no-headers 2>/dev/null | grep -v "NotReady" | grep "Ready" ) && break
   sleep 3
 done
-
+history -c
 # deploy apps
 echo "Deploying apps"
 kubectl apply -f /tmp/deployment.yml
