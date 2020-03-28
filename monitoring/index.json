@@ -27,13 +27,13 @@
   },
   "environment": {
     "showdashboard": true,
+    "dashboards": [{"name": "Grafana", "port": 3000}, {"name": "Prometheus", "port": 9090}],
     "uilayout": "terminal-iframe",
     "hideintro": false,
 		"hidefinish": false,
     "uimessage1": "\u001b[32mThis is your interactive bash terminal. The environment is getting reeady, don't refresh the page!\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "docker",
-    "port": 3000
+    "imageid": "docker"
   }
 }
