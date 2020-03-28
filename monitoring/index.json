@@ -27,8 +27,7 @@
   },
   "environment": {
     "showdashboard": false,
-    "dashboards": [{"name": "Grafana", "port": 3000}, {"name": "Prometheus", "port": 9090}],
-    "uilayout": "terminal-iframe",
+    "uilayout": "terminal",
     "hideintro": false,
 		"hidefinish": false,
     "uimessage1": "\u001b[32mThis is your interactive bash terminal. The environment is getting reeady, don't refresh the page!\u001b[m\r\n"
