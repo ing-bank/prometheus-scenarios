@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+stty -echo
 function panic {
     echo $1
     exit 1
