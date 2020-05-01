@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
+
+# Disables the echoing of commands
 stty -echo
+
 function panic {
     echo $1
     exit 1
