@@ -13,8 +13,11 @@ sleep 3
 
 echo "Deploying apps..."
 # docker-compose -f monitoring-apps.yml up -d || panic """
-Error while setting up the environment.
-Try to refresh the window.
-"""
+# Error while setting up the environment.
+# Try to refresh the window.
+# """
 
 echo "Everything done, you can start learning!"
+
+# Restore echo
+stty echo
