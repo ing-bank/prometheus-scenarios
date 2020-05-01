@@ -1,32 +1,15 @@
 version: "3.6"
 services:
   grafana:
-    image: grafana/grafana:6.7.1
+    image: jberny/katacoda-promql-grafana:latest
     ports:
       - "3000:3000"
-    volumes:
-      - type: bind
-        source: ${PWD}/assets/grafana/provisioning
-        target: /etc/grafana/provisioning
-        volume:
-          nocopy: true
-      - type: bind
-        source: ${PWD}/assets/grafana/grafana.ini
-        target: /etc/grafana/grafana.ini
-        volume:
-          nocopy: true
     networks:
       - promql-net
   prometheus:
-    image: prom/prometheus:v2.17.1
+    image: docker.io/jberny/katacoda-promql-prometheus:latest
     ports:
       - "9090:9090"
-    volumes:
-      - type: bind 
-        source: ${PWD}/assets/prometheus
-        target: /etc/prometheus
-        volume:
-          nocopy: true
     networks:
       - promql-net
   alertmanager:
