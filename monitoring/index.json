@@ -27,8 +27,8 @@
           "target": "~/assets/prometheus/prometheus.yml"
         },
         {
-          "file": "grafana/provisioning/datasources",
-          "target": "~/assets/grafana/provisioning/datasources"
+          "file": "grafana/provisioning/datasources/datasources.yml",
+          "target": "~/assets/grafana/provisioning/datasources/datasources.yml"
         },
         {
           "file": "grafana/grafana.ini",
