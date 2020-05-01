@@ -3,17 +3,49 @@ services:
   grafana:
     image: grafana/grafana:6.7.1
     ports:
-    - "3000:3000"
+      - "3000:3000"
+    volumes:
+      - type: bind
+        source: ${PWD}/assets/grafana/provisioning
+        target: /etc/grafana/provisioning
+        volume:
+          nocopy: true
+      - type: bind
+        source: ${PWD}/assets/grafana/grafana.ini
+        target: /etc/grafana/grafana.ini
+        volume:
+          nocopy: true
+    networks:
+      - promql-net
   prometheus:
     image: prom/prometheus:v2.17.1
     ports:
-    - "9090:9090"
+      - "9090:9090"
+    volumes:
+      - type: bind 
+        source: ${PWD}/assets/prometheus
+        target: /etc/prometheus
+        volume:
+          nocopy: true
+    networks:
+      - promql-net
   alertmanager:
     image: prom/alertmanager:v0.20.0
     ports:
-    - "9093:9093"
-  mattermost:
-    image: mattermost/mattermost-preview:5.14.0
+      - "9093:9093"
+    networks:
+      - promql-net
+  # mattermost:
+  #   image: mattermost/mattermost-preview:5.14.0
+  #   ports:
+  #     - "8065:8065"
+  mondemoapi:
+    image: jberny/mondemoapi:latest
     ports:
-    - "8065:8065"
+      - "8080:8080"
+    networks:
+      - promql-net
+
+networks:
+  promql-net:
 
