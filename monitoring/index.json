@@ -17,25 +17,23 @@
       "text": "finish.md"
     },
     "assets": {
-      "client": [
-        {
-          "file": "monitoring-apps.yml",
-          "target": "~/"
-        }
-      ],
       "host01": [
         {
+          "file": "monitoring-apps.yml",
+          "target": "/tmp/assets"
+        },
+        {
           "file": "prometheus/prometheus.yml",
-          "target": "~/tutorial/assets/prometheus/prometheus.yml"
+          "target": "/tmp/assets/prometheus/prometheus.yml"
         },
         {
 
           "file": "grafana/provisioning/datasources/datasources.yml",
-          "target": "~/tutorial/assets/grafana/provisioning/datasources/datasources.yml"
+          "target": "/tmp/assets/grafana/provisioning/datasources/datasources.yml"
         },
         {
           "file": "grafana/grafana.ini",
-          "target": "~/tutorial/assets/grafana/grafana.ini"
+          "target": "/tmp/assets/grafana/grafana.ini"
         }
       ]
     }
