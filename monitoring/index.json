@@ -24,15 +24,15 @@
         },
         {
           "file": "prometheus/prometheus.yml",
-          "target": "~/assets/prometheus/prometheus.yml"
+          "target": "~/tutorial/assets/prometheus/prometheus.yml"
         },
         {
           "file": "grafana/provisioning/datasources/datasources.yml",
-          "target": "~/assets/grafana/provisioning/datasources/datasources.yml"
+          "target": "~/tutorial/assets/grafana/provisioning/datasources/datasources.yml"
         },
         {
           "file": "grafana/grafana.ini",
-          "target": "~/assets/grafana/grafana.ini"
+          "target": "~/tutorial/assets/grafana/grafana.ini"
         }
       ]
     }
