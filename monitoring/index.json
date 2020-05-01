@@ -21,6 +21,18 @@
         {
           "file": "monitoring-apps.yml",
           "target": "~/"
+        },
+        {
+          "file": "prometheus/prometheus.yml",
+          "target": "~/assets/prometheus/prometheus.yml"
+        },
+        {
+          "file": "grafana/provisioning/datasources",
+          "target": "~/assets/grafana/provisioning/datasources"
+        },
+        {
+          "file": "grafana/grafana.ini",
+          "target": "~/assets/grafana/grafana.ini"
         }
       ]
     }
