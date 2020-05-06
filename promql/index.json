@@ -19,7 +19,7 @@
     },
     {
       "title": "Prometheus Label Operators",
-      "text": "steps/LabelAndOperators.md"
+      "text": "steps/LabelOperators.md"
     },
     {
       "title": "Templating Dashboards",
