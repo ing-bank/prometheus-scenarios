@@ -25,7 +25,7 @@ is up and 0 otherwise. Go ahead and type `up` in the metric input box and press 
 an autocomplete menu that tries to guess what you want to type (if the autocomplete does not show the up metric, just press 
 `esc` on your keyboard to make it disappear).
 
-## Metrics and Queries - Assignment
+## Assignment
 Add the `up` metric and execute the query.
 
 Note that the legend (just below the graph) shows the metric name with its label names and values. 

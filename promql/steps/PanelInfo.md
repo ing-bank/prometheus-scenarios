@@ -1,10 +1,12 @@
-**Objective:** understand how to use the legend format to adjust the name of a time series and changing your graphs.
+**Objective:** understand how to use the legend format to adjust the name of a time series and your graphs.
 
 ## Title
-In the previous step, Grafana created a panel to let you input your query. That comes with 
+In the previous step, Grafana created a panel to let you input your query. That comes with the default title which you probably
+want to change. 
 
-### Title - Assignment 
-Go to the General tab to change the Title of your graph and to the Axes tab to label your axes
+### Assignment 
+1. Change the query to `logged_on_customers`
+1. Go to the General tab of your graph and change the Title to "Logged on customers"
 
 ## Legend
 You might have noticed that your legend for the **logged_on_customers** metric looks messy. That happens because Prometheus gives
@@ -15,7 +17,7 @@ This field takes both static text or label values. To use label values, you need
 Grafana does not care about the uniqueness of names so take care to select appropriate labels or the result may end up highly 
 confusing. 
 
-### Legend - Assignment 
+### Assignment 
 Adjust the dashboard to show only the country code in the legend
 
 ## Resolution

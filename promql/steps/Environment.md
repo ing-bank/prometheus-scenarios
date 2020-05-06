@@ -13,7 +13,7 @@ All the applications that you are going to use are deployed in Docker. You can c
 
 `docker ps`{{execute}}
 
-## Dashboards
+## Applications
 
 The web interfaces of your applications are accessible via this links:
 
