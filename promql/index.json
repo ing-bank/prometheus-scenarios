@@ -7,15 +7,15 @@
     "steps": [
     {
       "title": "Get Familiar with the environment",
-      "text": "/promql/steps/Environment.md"
+      "text": "steps/Environment.md"
     },
     {
       "title": "Grafana Panels, Legend and Labels",
-      "text": "/promql/steps/PanelInfo.md"
+      "text": "steps/PanelInfo.md"
     },
     {
       "title": "Intro to Grafana and PromQL",
-      "text": "/promql/steps/PanelInfo.md"
+      "text": "steps/PanelInfo.md"
     }
     ],
     "intro": {
