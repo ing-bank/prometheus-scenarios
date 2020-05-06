@@ -1,6 +1,4 @@
-# Grafana Panels
-
-**Objective:** understand how to use the Legend format to adjust the name of a time series and changing your graphs.
+**Objective:** understand how to use the legend format to adjust the name of a time series and changing your graphs.
 
 ## Title
 In the previous step, Grafana created a panel to let you input your query. That comes with 

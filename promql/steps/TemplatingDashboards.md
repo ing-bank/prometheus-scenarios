@@ -1,5 +1,3 @@
-#  Dashboard Templating
-
 **Objective:** understand dashboard templating
 
 You just saw that you can use operators to filter results. Now, imagine that you want to have a separate graph for each value

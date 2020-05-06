@@ -1,5 +1,3 @@
-# Intro to Grafana and PromQL
-
 **Objective:** make your first graph.
 
 Access [Grafana](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/) and hover on the big plus sign

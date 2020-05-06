@@ -10,12 +10,20 @@
       "text": "steps/Environment.md"
     },
     {
-      "title": "Grafana Panels, Legend and Labels",
+      "title": "Intro to Grafana and PromQL",
+      "text": "steps/VisualizationsAndMetrics.md"
+    },
+    {
+      "title": "Grafana Panels",
       "text": "steps/PanelInfo.md"
     },
     {
-      "title": "Intro to Grafana and PromQL",
-      "text": "steps/PanelInfo.md"
+      "title": "Prometheus Label Operators",
+      "text": "steps/LabelAndOperators.md"
+    },
+    {
+      "title": "Templating Dashboards",
+      "text": "steps/TemplatingDashboards.md"
     }
     ],
     "intro": {
