@@ -1,20 +1,21 @@
 {
-  "title": "Monitoring",
+  "title": "Grafana and PromQL - Chapter 1",
   "description": "Learn how to use PromQL and Grafana",
   "difficulty": "Beginner",
   "time": "1 hour",
   "details": {
-    "steps": [{
+    "steps": [
+    {
       "title": "Get Familiar with the environment",
-      "text": "steps/Environment.md"
+      "text": "/steps/Environment.md"
     },
     {
       "title": "Grafana Panels, Legend and Labels",
-      "text": "steps/PanelInfo.md"
+      "text": "/steps/PanelInfo.md"
     },
     {
       "title": "Intro to Grafana and PromQL",
-      "text": "steps/PanelInfo.md"
+      "text": "/steps/PanelInfo.md"
     }
     ],
     "intro": {
