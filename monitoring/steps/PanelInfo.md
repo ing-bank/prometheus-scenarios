@@ -1,9 +1,12 @@
 # Grafana Panels
 
+**Objective:** understand how to use the Legend format to adjust the name of a time series and changing your graphs.
+
 ## Title
 In the previous step, Grafana created a panel to let you input your query. That comes with 
+
 ### Title - Assignment 
-Use the **Legend format** to display each 
+Go to the General tab to change the Title of your graph and to the Axes tab to label your axes
 
 ## Legend
 You might have noticed that your legend for the **logged_on_customers** metric looks messy. That happens because Prometheus gives
@@ -15,7 +18,7 @@ Grafana does not care about the uniqueness of names so take care to select appro
 confusing. 
 
 ### Legend - Assignment 
-Use the **Legend format** to display each 
+Adjust the dashboard to show only the country code in the legend
 
 ## Resolution
 The Resolution field is used to determine how many datapoints Grafana should receive from Prometheus. The default is 1/1 which 
