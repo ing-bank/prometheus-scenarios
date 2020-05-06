@@ -5,9 +5,18 @@
   "time": "1 hour",
   "details": {
     "steps": [{
-      "title": "Step 1 - Get Familiar with the environment",
-      "text": "step1.md"
-    }],
+      "title": "Get Familiar with the environment",
+      "text": "steps/Environment.md"
+    },
+    {
+      "title": "Grafana Panels, Legend and Labels",
+      "text": "steps/PanelInfo.md"
+    },
+    {
+      "title": "Intro to Grafana and PromQL",
+      "text": "steps/PanelInfo.md"
+    }
+    ],
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",

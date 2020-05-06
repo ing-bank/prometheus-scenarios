@@ -9,7 +9,7 @@ Try it out!
 
 ## Docker
 
-All the applications that you are going to use are deployed in Docker. Check that the containers are running with this command.
+All the applications that you are going to use are deployed in Docker. You can check that the containers are running with this command.
 
 `docker ps`{{execute}}
 
@@ -18,7 +18,6 @@ All the applications that you are going to use are deployed in Docker. Check tha
 The web interfaces of your applications are accessible via this links:
 
 * Grafana: https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
-admin/admin
 * Prometheus: https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 * Alertmanager: https://[[HOST_SUBDOMAIN]]-9093-[[KATACODA_HOST]].environments.katacoda.com/
 * Mattermost: https://[[HOST_SUBDOMAIN]]-8065-[[KATACODA_HOST]].environments.katacoda.com/
