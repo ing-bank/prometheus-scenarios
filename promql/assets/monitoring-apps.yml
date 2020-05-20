@@ -23,7 +23,7 @@ services:
   #   ports:
   #     - "8065:8065"
   mondemoapi:
-    image: jberny/mondemoapi:latest
+    image: jberny/mondemoapi:v0.0.2
     ports:
       - "8080:8080"
     networks:
