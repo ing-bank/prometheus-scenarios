@@ -24,6 +24,10 @@
     {
       "title": "Templating Dashboards",
       "text": "steps/TemplatingDashboards.md"
+    },
+    {
+      "title": "Learn how to work with Summary and Histogram",
+      "text": "chapter3/SummaryAndHistogram.md"
     }
     ],
     "intro": {
