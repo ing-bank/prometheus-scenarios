@@ -1,5 +1,5 @@
 {
-  "title": "Grafana and PromQL - Chapter 1",
+  "title": "Grafana and PromQL",
   "description": "Learn how to use PromQL and Grafana",
   "difficulty": "Beginner",
   "time": "1 hour",
@@ -26,7 +26,7 @@
       "text": "steps/TemplatingDashboards.md"
     },
     {
-      "title": "Learn how to work with Summary and Histogram",
+      "title": "Summary and Histogram",
       "text": "chapter3/SummaryAndHistogram.md"
     }
     ],
