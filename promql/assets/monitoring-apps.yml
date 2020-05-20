@@ -12,12 +12,12 @@ services:
       - "9090:9090"
     networks:
       - promql-net
-  alertmanager:
-    image: prom/alertmanager:v0.20.0
-    ports:
-      - "9093:9093"
-    networks:
-      - promql-net
+  # alertmanager:
+  #   image: prom/alertmanager:v0.20.0
+  #   ports:
+  #     - "9093:9093"
+  #   networks:
+  #     - promql-net
   # mattermost:
   #   image: mattermost/mattermost-preview:5.14.0
   #   ports:
