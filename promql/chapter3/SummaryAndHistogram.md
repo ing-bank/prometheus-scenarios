@@ -32,14 +32,18 @@ Make a dashboard showing the 3 countries that have the lowest average call durat
 
 <details>
     <summary>Show solution</summary>
-    
+    <p>
     **Solution.** You should have filled in: 
     `bottomk(3,rate(api_request_duration_seconds_sum[1m]) / rate(api_request_duration_seconds_count[1m]))`
-
+    </p>
+    <p>
     Since api_request_duration_seconds_sum and api_request_duration_seconds are counters, you need to use the rate function
     to be able to divide their values in the last minute. That gives you the average per country. 
     The `bottomk` function return only the n lowest values.
+    </p>
 </details>
+
+
 
 ## Histogram
 

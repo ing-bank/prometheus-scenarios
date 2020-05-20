@@ -7,23 +7,23 @@
     "steps": [
     {
       "title": "Get Familiar with the environment",
-      "text": "steps/Environment.md"
+      "text": "Environment.md"
     },
     {
       "title": "Intro to Grafana and PromQL",
-      "text": "steps/VisualizationsAndMetrics.md"
+      "text": "chapter1/IntroGrafanaPromQL.md"
     },
     {
       "title": "Grafana Panels",
-      "text": "steps/PanelInfo.md"
+      "text": "chapter1/PanelInfo.md"
     },
     {
       "title": "Prometheus Label Operators",
-      "text": "steps/LabelOperators.md"
+      "text": "chapter1/LabelOperators.md"
     },
     {
       "title": "Templating Dashboards",
-      "text": "steps/TemplatingDashboards.md"
+      "text": "chapter1/TemplatingDashboards.md"
     },
     {
       "title": "Summary and Histogram",
