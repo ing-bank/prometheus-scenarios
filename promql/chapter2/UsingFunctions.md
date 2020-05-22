@@ -61,8 +61,7 @@ unless your application stopped or restarted (in that case they are set back to 
 The demo api exposes a metric called *api_request_count* that simulates a measurement of the number of incoming requests.
 
 ### Assignment
-Create a dashboard showing the number of requests for each country and shows the average number of logons per second 
-in a one minute range vector.
+Create a dashboard showing the number of requests for each country.
 
 <details>
   <summary>Show solution</summary>
