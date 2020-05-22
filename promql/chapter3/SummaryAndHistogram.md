@@ -71,8 +71,8 @@ The demo api has a histogram called service_request_duration_seconds, which resu
 ```
 service_request_duration_seconds_count{service="some-service"}
 service_request_duration_seconds_sum{service="some-service"}
-service_request_duration_seconds{service="some-service",le="100.0"}
-service_request_duration_seconds{service="some-service",le="200.0"}
+service_request_duration_seconds{service="some-service",le="0.1"}
+service_request_duration_seconds{service="some-service",le="0.2"}
 service_request_duration_seconds{service="some-service",le="+Inf"}
 ```
 
