@@ -24,24 +24,24 @@ These functions should only be used with **gauges**.
 * *delta*: change in value between the first and last value of a time series in a range vector (time range)
 * *idelta*: change in value between the 2 last values of a time series in a range vector (time range)
 * *derive*: per-second derivative of a time series in range vector
-Note that the idelta function is somewhat less useful as it depends on the scrape interval in order to give it meaning.
+
+Delta shows you the *difference* between two points in time where the two values are subtracted from each other. 
+These two values are selected based on the given time frame (i.e. 1 min). 
+On the other hand, deriv(v range-vector) calculates the per-second *derivative* of the time series in a range vector v,
+using simple linear regression. In ther words, deriv calculates the slope of the graph.
+The idelta function is somewhat less useful as it depends on the scrape interval in order to give it meaning.
 
 When monitoring an application, you may be interested in the number of users currently using you application.
 Gauges are a good tool to measure it. The demo api has a metric called *logged_on_customers* that simulates exactly that.
 
 ### Assignment
-Add a panel showing the per second change in the number of logged on customers for each site
+Add a panel showing the per second change in the number of logged on customers for each country
 
 <details>
   <summary>Show solution</summary>
   <p>
-  **Solution**. You should have filled in: ```deriv(logged_on_customers{site='$site'}[1m])}```
+  **Solution**. You should have filled in: ```deriv(logged_on_customers{country='$country'}[1m])}```
   <!-- ![assignment5-1](./chapter2/assignment5-1.png) -->
-
-  Delta shows you the *difference* between two points in time where the two values are subtracted from each other. 
-  These two valuables are selected based on the given time frame (in this case 1 min). 
-  On the other hand, deriv(v range-vector) calculates the per-second *derivative* of the time series in a range vector v,
-  using simple linear regression. In ther words, deriv calculates the slope of the graph.
   </p>
 </details>
 
@@ -49,13 +49,15 @@ Add a panel showing the per second change in the number of logged on customers f
 These functions should only be used with **counters**.
 * *rate*: is used to calculate the per-second average rate of increase for a time series
 * *irate*: calculates the per-second average rate of increase for a time series based on the last two samples in a range vector.
+
 You should avoid using irate() unless your metric increases rapidly.
 Otherwise, the value will fluctuate wildly and will make your graph hard to read.
 
 For monitoring you would often be interested in the load on a system. 
-That is more directly related to the number of logons and logoffs. 
-These individual values cannot easily be derived from the logged_on_customers metric, 
-this is why counters are often used to determine load.
+That is more directly related to the number (or count) of incoming requests. 
+Counters suit to this purpose because their current value is the sum of all previous measurements,
+unless your application stopped or restarted (in that case they are set back to zero).
+
 The demo api exposes a metric called *api_request_count* that simulates a measurement of the number of incoming requests.
 
 ### Assignment
