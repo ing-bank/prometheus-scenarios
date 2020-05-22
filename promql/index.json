@@ -26,6 +26,14 @@
       "text": "chapter1/TemplatingDashboards.md"
     },
     {
+      "title": "PromQL Functions",
+      "text": "chapter2/UsingFunctions.md"
+    },
+    {
+      "title": "PromQL Aggretators",
+      "text": "chapter2/Aggregations.md"
+    },
+    {
       "title": "Summary and Histogram",
       "text": "chapter3/SummaryAndHistogram.md"
     }
