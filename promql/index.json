@@ -36,6 +36,14 @@
     {
       "title": "Summary and Histogram",
       "text": "chapter3/SummaryAndHistogram.md"
+    },
+    {
+      "title": "PromQL Operators",
+      "text": "chapter4/Operators.md"
+    },
+    {
+      "title": "Filter Vector Elements",
+      "text": "chapter4/Filtering.md"
     }
     ],
     "intro": {
