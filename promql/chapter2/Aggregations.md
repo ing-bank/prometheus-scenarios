@@ -17,13 +17,13 @@ As an example, considering our demo api, the `avg(rate(logged_on_customers)[1m])
 instant vector that tells us the average (per minute) number of logged on customers for each country.
 
 ### Assignment
-Use the metric *api_request_status_count* to make a dashboard showing a per-second rate of all 
+Use the metric *api_response_status_count* to make a dashboard showing a per-second rate of all 
 SUCCESS, FAILURE and ERROR api calls in a single graph.
 
 <details>
   <summary>Show solution</summary>
   
-  **Solution.** The metric should have been: sum(rate(api_request_status_count[1m]))
+  **Solution.** The metric should have been: `sum(rate(api_response_status_count[1m]))`
 </details>
 
 ## TopK and BottomK
