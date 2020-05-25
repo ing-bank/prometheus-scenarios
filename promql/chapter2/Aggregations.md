@@ -51,7 +51,7 @@ but smoothed as an average of the last 5 minutes.
 <details>
   <summary>Show solution</summary>
 
-  **Solution**. You should have filled in: ```avg_over_time(logged_on_customers[5m]```
+  **Solution**. You should have filled in: ```avg_over_time(logged_on_customers[5m])```
 </details>
 
 
