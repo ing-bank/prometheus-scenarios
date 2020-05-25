@@ -40,7 +40,8 @@ Add a panel showing the per second change in the number of logged on customers f
 <details>
   <summary>Show solution</summary>
   <p>
-  **Solution**. You should have filled in: ```deriv(logged_on_customers{country='$country'}[1m])}```
+
+  **Solution**. You should have filled in: ```deriv(logged_on_customers{country="$country"}[1m])```
   <!-- ![assignment5-1](./chapter2/assignment5-1.png) -->
   </p>
 </details>
