@@ -82,12 +82,13 @@ for the last 10 minutes. Show each result in a different panel.
 
 <details>
     <summary>Show solution</summary>
-    
+    <p>
     **Solution.** You should have created a variable called service.
-    
+    </p>
+    <p>
     You should have filled in 3 queries:
-    * `histogram_quantile(0.5, rate(service_request_duration_seconds_bucket{service=~"$service"}[10m]))`
-    * `histogram_quantile(0.9, rate(service_request_duration_seconds_bucket{service=~"$service"}[10m]))`
-    * `histogram_quantile(0.95, rate(service_request_duration_seconds_bucket{service=~"$service"}[10m]))`
-    ```
+      * `histogram_quantile(0.5, rate(service_request_duration_seconds_bucket{service=~"$service"}[10m]))`
+      * `histogram_quantile(0.9, rate(service_request_duration_seconds_bucket{service=~"$service"}[10m]))`
+      * `histogram_quantile(0.95, rate(service_request_duration_seconds_bucket{service=~"$service"}[10m]))`
+    </p>
 </details>
