@@ -44,6 +44,10 @@
     {
       "title": "Summary and Histogram",
       "text": "chapter4/SummaryAndHistogram.md"
+    },
+    {
+      "title": "Advanced Matching",
+      "text": "chapter5/AdvancedMatching.md"
     }
     ],
     "intro": {
