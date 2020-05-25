@@ -1,7 +1,13 @@
-# Advanced Matching
+**Objective:** learn how to use ignoring/on.
 
-## Assignment 15
-For the advanced matching topic we also added some recording rules to prometheus. A recording rule is frequently used to derive a metric from other metrics by aggregating over a number of dimensions and performing some transformations. Prometheus developers suggest a naming standard for these derived metrics (https://prometheus.io/docs/practices/rules/) that allow you to see the remaining dimensions, the original metric and the transformations performed. If you have a metric called http_errors that have labels for the web server instance, the method, the code (resulting http code) and the URL, you can perform the following transformation:
+For the advanced matching topic we also added some recording rules to prometheus. 
+A recording rule is frequently used to derive a metric from other metrics by aggregating
+over a number of dimensions and performing some transformations. 
+Prometheus developers suggest a [naming standard](https://prometheus.io/docs/practices/rules/#naming-and-aggregation)
+for these derived metrics that allow you to see the remaining dimensions, 
+the original metric and the transformations performed. 
+If you have a metric called http_errors that have labels for the web server instance, 
+the method, the code (resulting http code) and the URL, you can perform the following transformation:
 > sum(rate(http_errors[5m])) by (method,code)
 
 The standardised name for this derived metric would be:
@@ -24,8 +30,7 @@ We have added two recording rules to the test environment, resulting in metrics 
 > function:api_calls:rate1m
 > function_result:api_calls:rate1m
 
-**Objective:**
-Learn how to use ignoring/on
+### Assignemnt
   * Use 'function:api_calls:rate1m' and 'function_result:api_calls:rate1m'
   * Make a graph showing the percentage of 'api_calls' that is in error for each function
 
