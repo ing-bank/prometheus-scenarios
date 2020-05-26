@@ -12,5 +12,9 @@ The label operators can only be used inside the curly braces in this way: `metri
 **Example:** `up{ job="mondemoapi" }` selects all the datapoints in the `up` metrics with label 
 `job` and value `mondemoapi`.
 
+**N.B.** When you use the regex operator, it's a good practice to enclose the expression between the anchors `^` and `$`.
+For example: `up{ job=~"^.*demo.*$" }`. This will guarantee that your regex is not handled in different ways 
+by different interpreters.
+
 ## Assignment
 Adjust the dashboard so that it does not show the number of customers for the country 'nl'.
