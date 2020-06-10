@@ -7,9 +7,11 @@ For that purpose, you can use a *Range Vector*. Selecting a range vector in Prom
 appending a time window specification between square brackets to your metric (for example: my_metric[1m] selects 1 minute).
 These ranges allow the use of all sorts of functions in Prometheus that manipulate the data. 
 
-In order to know what is the smallest range that you can select, you need to know the *scrape_interval*.
-That is how often Prometheus pulls the metrics from the targets. For this demo, we set a scrape interval of
-1 minute, thus the smallest range you can select is one minute.
+To know what range that you can select is good enough, you need to know the *scrape_interval*.
+That is how often Prometheus pulls the metrics from the targets. Depending on the scrape interval and function you are going to use,
+you will get more accurate results with a larger range. 
+For this demo, we set a scrape interval of 10s. Thus our Prometheus instance will collect 3 values every 30 seconds (30/10=3).
+So a range of one minute is good enough for our demo.
 Normally, you would have to configure this in Prometheus yourself. In case you don't know what's the value
 you can see it in Prometheus UI under the Status menu, in the Configuration tab.
 
@@ -43,6 +45,7 @@ Gauges are a good tool to measure it. The demo api has a metric called *logged_o
 ### Assignment
 Let's go back to [Grafana](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/).
 Add a panel showing the per second change in the number of logged on customers for each country.
+Use a range of 1 minute.
 
 <details>
   <summary>Show solution</summary>
@@ -71,6 +74,7 @@ The demo api exposes a metric called *api_request_count* that simulates a measur
 
 ### Assignment
 Create a dashboard showing the number of requests per second for all countries.
+Use a range of 1 minute.
 
 <details>
   <summary>Show solution</summary>
