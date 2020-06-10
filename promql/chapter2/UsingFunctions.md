@@ -5,7 +5,13 @@ When you submit a basic PromQL query, i.e. `up`, you get back a list of time ser
 This is called an *Instant Vector*. Though, in a lot of cases, you will need to work with all the values in a certaine time frame.
 For that purpose, you can use a *Range Vector*. Selecting a range vector in Prometheus is done by 
 appending a time window specification between square brackets to your metric (for example: my_metric[1m] selects 1 minute).
-These ranges allow the use of all sorts of functions in Prometheus that manipulate the data.
+These ranges allow the use of all sorts of functions in Prometheus that manipulate the data. 
+
+In order to know what is the smallest range that you can select, you need to know the *scrape_interval*.
+That is how often Prometheus pulls the metrics from the targets. For this demo, we set a scrape interval of
+1 minute, thus the smallest range you can select is one minute.
+Normally, you would have to configure this in Prometheus yourself. In case you don't know what's the value
+you can see it in Prometheus UI under the Status menu, in the Configuration tab.
 
 ## Assignement
 You can see the difference by using the query directly in Prometheus.
@@ -23,10 +29,10 @@ It's important to know the type of metric you are working with because, you migh
 These functions should only be used with **gauges**.
 * *delta*: change in value between the first and last value of a time series in a range vector (time range)
 * *idelta*: change in value between the 2 last values of a time series in a range vector (time range)
-* *derive*: per-second derivative of a time series in range vector
+* *deriv*: per-second derivative of a time series in range vector
 
 Delta shows you the *difference* between two points in time where the two values are subtracted from each other. 
-These two values are selected based on the given time frame (i.e. 1 min). 
+These two values are selected based on the given time frame (e.g. 1 min). 
 On the other hand, deriv(v range-vector) calculates the per-second *derivative* of the time series in a range vector v,
 using simple linear regression. In ther words, deriv calculates the slope of the graph.
 The idelta function is somewhat less useful as it depends on the scrape interval in order to give it meaning.
@@ -35,19 +41,21 @@ When monitoring an application, you may be interested in the number of users cur
 Gauges are a good tool to measure it. The demo api has a metric called *logged_on_customers* that simulates exactly that.
 
 ### Assignment
-Add a panel showing the per second change in the number of logged on customers for each country
+Let's go back to [Grafana](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/).
+Add a panel showing the per second change in the number of logged on customers for each country.
 
 <details>
   <summary>Show solution</summary>
   <p>
 
   **Solution**. You should have filled in: ```deriv(logged_on_customers{country="$country"}[1m])```
-  <!-- ![assignment5-1](./chapter2/assignment5-1.png) -->
+  
   </p>
 </details>
 
 ## Rate and Irate
-These functions should only be used with **counters**.
+These functions should only be used with **counters**. They basically measure the same thing, but in different ways, 
+thus they should be used in different situations.
 * *rate*: is used to calculate the per-second average rate of increase for a time series
 * *irate*: calculates the per-second average rate of increase for a time series based on the last two samples in a range vector.
 
@@ -62,12 +70,11 @@ unless your application stopped or restarted (in that case they are set back to 
 The demo api exposes a metric called *api_request_count* that simulates a measurement of the number of incoming requests.
 
 ### Assignment
-Create a dashboard showing the number of requests for each country.
+Create a dashboard showing the number of requests per second for all countries.
 
 <details>
   <summary>Show solution</summary>
-  <p>
-  You should have filled in: ```rate(api_request_count[1m])```
-  </p>
+  
+  **Solution**. You should have filled in: ```rate(api_request_count[1m])```
 </details>
 
