@@ -19,7 +19,7 @@ instant vector that tells us the average (per minute) number of logged on custom
 ### Assignment
 Use the metric *api_response_status_count* to make a dashboard showing a per-second rate of all 
 SUCCESS, FAILURE and ERROR api calls in a single graph.
-
+Use a range of 1 minute.
 <details>
   <summary>Show solution</summary>
   
@@ -31,11 +31,14 @@ The *topk* and *bottomk* operators are used to get respectively the highest and 
 
 ### Assignment
 Make a dashboard showing a per-second rate of number api request for the two countries with the highest number of requests.
+Use a range of 1 minute.
 
 <details>
   <summary>Show solution</summary>
 
   **Solution.** You should have filled in: ```topk(2, rate(api_request_count[1m]))```
+  You may wonder why you see 4 countries instead of 2. This happens because you are also viewwing the history of
+  this metric, so you see the top 2 at any point in time and Grafana shows a legend for all the lines it draws.
 </details>
 
 ## Over-Time Aggregators
