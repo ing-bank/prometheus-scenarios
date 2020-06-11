@@ -77,17 +77,18 @@ service_request_duration_seconds{service="some-service",le="+Inf"}
 ```
 
 ### Assignment
-Make a dashboard showing the median (50-percentile), 90-percentile and 95-percentile of service_request_duration_seconds
-for the last 10 minutes. Show each result in a different panel.
+Make a dashboard showing the median (50-percentile), 90-percentile and 95-percentile of service_request_duration_seconds for the last 10 minutes. 
+Show each result in a different panel.
 
 <details>
     <summary>Show solution</summary>
 
-    **Solution** You should have created a variable called service.
+    **Solution**. You should have created a variable called service with value:
+    `label_values(service)`.
     You should have filled in 3 queries:
     ```
-    histogram_quantile(0.5, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le, service))
-    histogram_quantile(0.9, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le, service))
-    histogram_quantile(0.95, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le, service))
+    histogram_quantile(0.5, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
+    histogram_quantile(0.9, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
+    histogram_quantile(0.95, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
     ```
 </details>
