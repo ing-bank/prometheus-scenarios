@@ -19,10 +19,10 @@ The result of example1 + example2 would be:
 Note that the example1 with the label test2 is ignored because the instant vectors did not have match in example2.
 
 ### Assignment
-Change a graph with logged on customers per second to show logged on customers per minute
+Use the logged_on_customers to show the rate of logged on customers multiplied by 10.
 
 <details>
   <summary>Show solution</summary>
   
-  **Solution**. You should have filled in: ```rate(logged_on_customers[1m])*60```
+  **Solution**. You should have filled in: ```rate(logged_on_customers[1m])*10```
 </details>
