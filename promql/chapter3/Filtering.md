@@ -30,11 +30,11 @@ This filtering functionality is used a lot when writing alert rules, when you wa
 verify a situation to be true or false.
 
 ### Assignment
-Adjust the graph with logons per minute to only show a value where it is above 100.
+Adjust the previous graph with api_request_count to only show a value where it is above 150.
 
 <details>
   <summary>Show solution</summary>
 
-  **Solution**. You should have filled in: ```rate(logged_on_customers[1m])*60 > 100```
+  **Solution**. You should have filled in: ```rate(api_request_count[1m])*10 > 150```
 </details>
 
