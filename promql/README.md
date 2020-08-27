@@ -37,3 +37,26 @@ see [here](https://www.katacoda.community/accessing-ports-ui.html#markdown-examp
 The docker images for Prometheus and Grafana are pre-built with the configuration files in it. 
 The build is done manually using the docker files are stored in the `docker` folder.
 
+## How to add content
+
+It's quite easy to add a new chapter or assignement. The content needs to be written into a Markdown file named after the topic.
+Then the files need to be added in the `index.json` in the `steps` list. 
+When creating content consider these simple rules:
+* keep things simple for the student
+* split a chapter in multiple possibly small topics 
+* the focus of each assignement should be on a specific result or learning objective (i.e. **Objective:** understand time series filtering)
+* chapters and assignements should go from basic level to more advanced or expert level
+
+New content should respect the format of the scenario:
+1. state the objective at the beginning
+1. explain the topic
+1. write an assignement to let students put in practice what they read
+1. provide a solution which is hidden by default, use the snippet below
+
+```html
+<details>
+  <summary>Show solution</summary>
+
+  **Solution**. You should have filled in: ```rate(api_request_count[1m])*10 > 150```
+</details>
+```
