@@ -1,6 +1,6 @@
 **Objective:**  learn how to work with Summary and Histogram.
 
-The Gauge and Counter type metrics are not the only ones that Prometheus supports.
+The Gauge and Counter type metrics are not the only types supported by Prometheus.
 There are also the Summary and the Histogram that are used to **observe** values. 
 
 ## Summary
