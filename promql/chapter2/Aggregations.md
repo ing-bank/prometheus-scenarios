@@ -27,7 +27,7 @@ Use a range of 1 minute.
 </details>
 
 ## TopK and BottomK
-The *topk* and *bottomk* operators are used to get respectively the highest and lowest k time series in the metric.
+The *topk* and *bottomk* operators are used to get the highest and lowest k time series in the metric respectively.
 
 ### Assignment
 Make a dashboard showing a per-second rate of number api request for the two countries with the highest number of requests.
@@ -48,8 +48,8 @@ These functions include *avg_over_time*, *min_over_time*, *max_over_time* and *s
 These functions work on a range vector.
 
 ### Assignment
-Make a dashboard showing graphs of the number of customers that was logged on for each site,
-but smoothed as an average of the last 5 minutes.
+Make a dashboard showing graphs of the number of customers that were logged on for each site,
+but smoothed out as an average of the last 5 minutes.
 
 <details>
   <summary>Show solution</summary>
