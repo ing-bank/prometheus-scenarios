@@ -1,5 +1,0 @@
-FROM prom/prometheus:v2.19.0
-LABEL maintainer="f.bernardi89@gmail.com"
-
-COPY prometheus.yml /etc/prometheus/
-

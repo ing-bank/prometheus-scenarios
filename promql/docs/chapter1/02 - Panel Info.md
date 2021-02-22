@@ -1,3 +1,4 @@
+# Grafana Panels
 **Objective:** understand how to use the legend format to adjust the name of a time series and your graphs.
 
 ## Title

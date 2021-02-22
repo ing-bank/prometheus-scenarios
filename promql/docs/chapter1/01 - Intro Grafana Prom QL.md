@@ -1,6 +1,7 @@
+# Intro to Grafana and PromQL
 **Objective:** make your first graph.
 
-Access [Grafana](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/) and hover on the big plus sign
+Access [Grafana](http://localhost:3000/) and hover on the big plus sign
 button in the left menu. Then click on **Dashboard**, and, on the new page, click on **Add Query**.
 
 ## Visualizations

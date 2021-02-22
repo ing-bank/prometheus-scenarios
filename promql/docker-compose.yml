@@ -6,29 +6,28 @@ services:
       - "3000:3000"
     networks:
       - promql-net
+    volumes:
+      - ${PROMQLWD}/assets/grafana:/etc/grafana
   prometheus:
-    image: docker.io/jberny/katacoda-promql-prometheus:latest
+    image: prom/prometheus:v2.25.0
     ports:
       - "9090:9090"
     networks:
       - promql-net
-  # alertmanager:
-  #   image: prom/alertmanager:v0.20.0
-  #   ports:
-  #     - "9093:9093"
-  #   networks:
-  #     - promql-net
-  # mattermost:
-  #   image: mattermost/mattermost-preview:5.14.0
-  #   ports:
-  #     - "8065:8065"
+    volumes:
+      - ${PROMQLWD}/assets/prometheus:/etc/prometheus
   mondemoapi:
     image: jberny/mondemoapi:v0.0.6
     ports:
       - "8080:8080"
     networks:
       - promql-net
+  docs:
+    image: dannyben/madness:0.9.3
+    ports: 
+      - "3080:3000"
+    volumes:
+      - ${PROMQLWD}/docs:/docs
 
 networks:
   promql-net:
-

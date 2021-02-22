@@ -1,5 +1,0 @@
-FROM grafana/grafana:6.7.4
-LABEL maintainer="f.bernardi89@gmail.com"
-COPY provisioning /etc/grafana/provisioning
-COPY grafana.ini /etc/grafana/
-
