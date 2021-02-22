@@ -4,20 +4,20 @@ This is the right place if you want to learn basics of monitoring with Prometheu
 
 This scenario is divided in chapters which cover the following topics:
 1. Chapter 1 - Grafana and PromQL basics 
-    1. [Intro to Grafana and PromQL](chapter1/01-IntroGrafanaPromQL.md)
-    1. [Grafana Panels](chapter1/02-PanelInfo.md)
-    1. [PromQL Label Operators](chapter1/03-LabelOperators.md)
-    1. [Templating Dashboards](chapter1/04-TemplatingDashboards.md)
+    1. Intro to Grafana and PromQL
+    1. Grafana Panels
+    1. PromQL Label Operators
+    1. Templating Dashboards
 1. Chapter 2 - PromQL
-    1. [PromQL Functions](chapter2/01-UsingFunctions.md)
-    1. [PromQL Aggregations](chapter2/02-Aggregations.md)
+    1. PromQL Functions
+    1. PromQL Aggregations
 1. Chapter 3
-    1. [PromQL Vector Operators](chapter3/01-Operators.md)
-    1. [PromQL Filtering Vector Elements](chapter3/02-Filtering.md)
+    1. PromQL Vector Operators
+    1. PromQL Filtering Vector Elements
 1. Chapter 4
-    1. [Prometheus Summary and Histogram](chapter4/01-SummaryAndHistogram.md)
+    1. Prometheus Summary and Histogram
 1. Chapter 5
-    1. [PromQL Advanced Matching](chapter5/01-AdvancedMatching.md)
+    1. PromQL Advanced Matching
 
 
 ## Students
