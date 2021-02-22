@@ -1,3 +1,4 @@
+# Filtering
 **Objective:** Understand time series filtering
 
 Prometheus also supports binary operators that filter (discard) elements of an instant vector.

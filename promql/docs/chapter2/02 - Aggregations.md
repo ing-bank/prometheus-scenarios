@@ -1,3 +1,4 @@
+# Aggregations
 **Objective:** learn how to user aggregators.
 
 ## Sum, Min, Max and Avg

@@ -1,3 +1,4 @@
+# Grafana Variables
 **Objective:** understand how to make a graph scalable.
 
 ### The $__interval Variable
@@ -25,17 +26,4 @@ to become less than values that actually yield results.
   * Use the minimal step size to ensure that the graph stays functioning when zoomed in very far
   * Adjust the graph so that it shows all information in the graph even when zoomed out very far
 
-<details>
-  <summary>Show solution</summary>
-
-  ## Solution 6b
-  The metric should have been:
-  ![assignment6b-1](./chapter2/assignment6b-1.png)
-
-  The graph should look similar to this:
-  ![assignment6b-2](./chapter2/assignment6b-2.png)
-
-  Zooming out to 20 days the graph would look like this:
-  ![assignment6b-2](./chapter2/assignment6b-3.png)
-</details>
 

@@ -1,3 +1,4 @@
+# Using Functions
 **Objective:** learn how and when to use PromQL functions.
 
 ## Instant Vectors and Range Vectors
@@ -17,7 +18,7 @@ you can see it in Prometheus UI under the Status menu, in the Configuration tab.
 
 ## Assignement
 You can see the difference by using the query directly in Prometheus.
-Go to the [Prometheus](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/) 
+Go to the [Prometheus](http://localhost:9090/) 
 web interface, query the `up` metric with and without range selector and observe the difference.
 
 
@@ -43,7 +44,7 @@ When monitoring an application, you may be interested in the number of users cur
 Gauges are a good tool to measure it. The demo api has a metric called *logged_on_customers* that simulates exactly that.
 
 ### Assignment
-Let's go back to [Grafana](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/).
+Let's go back to [Grafana](http://localhost:3000/).
 Add a panel showing the per second change in the number of logged on customers for each country.
 Use a range of 1 minute.
 

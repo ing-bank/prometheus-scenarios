@@ -1,3 +1,4 @@
+# Summary and Histograms
 **Objective:**  learn how to work with Summary and Histogram.
 
 The Gauge and Counter type metrics are not the only types supported by Prometheus.
@@ -92,5 +93,3 @@ Show each result in a different panel.
     histogram_quantile(0.95, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
     ```
 </details>
-
-[Next >](../chapter4/finish.md)

@@ -1,3 +1,4 @@
+# Operators
 **Objective:** learn how to use operators.
 
 Prometheus allows the use of operators for addition(+), subtraction(-), multiplication(\*), division(/), modulo(%) 
