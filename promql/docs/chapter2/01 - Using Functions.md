@@ -16,7 +16,7 @@ So a range of one minute is good enough for our demo.
 Normally, you would have to configure this in Prometheus yourself. In case you don't know what's the value
 you can see it in Prometheus UI under the Status menu, in the Configuration tab.
 
-## Assignement
+## Assignment
 You can see the difference by using the query directly in Prometheus.
 Go to the [Prometheus](http://localhost:9090/) 
 web interface, query the `up` metric with and without range selector and observe the difference.
@@ -37,7 +37,7 @@ These functions should only be used with **gauges**.
 Delta shows you the *difference* between two points in time where the two values are subtracted from each other. 
 These two values are selected based on the given time frame (e.g. 1 min). 
 On the other hand, deriv(v range-vector) calculates the per-second *derivative* of the time series in a range vector v,
-using simple linear regression. In ther words, deriv calculates the slope of the graph.
+using simple linear regression. In other words, deriv calculates the slope of the graph.
 The idelta function is somewhat less useful as it depends on the scrape interval in order to give it meaning.
 
 When monitoring an application, you may be interested in the number of users currently using you application.

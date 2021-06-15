@@ -10,7 +10,7 @@ Prometheus has a few operators to allow you to influence the selection on your l
 The label operators can only be used inside the curly braces in this way: `metric_name{ label operator "value" }` 
 (The quotes are required). 
 
-**Example:** `up{ job="mondemoapi" }` selects all the datapoints in the `up` metrics with label 
+**Example:** `up{ job="mondemoapi" }` selects all the data points in the `up` metrics with label 
 `job` and value `mondemoapi`.
 
 **N.B.** When you use the regex operator, it's a good practice to enclose the expression between the anchors `^` and `$`.

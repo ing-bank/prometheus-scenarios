@@ -9,12 +9,12 @@ Summary metrics are used to track the size of events, usually how long they take
 It consists of two counters, and some optional gauges. 
 Mind that these are **all different metrics** even though they belong to the same summary. 
 The two counters are named after the summary with the suffix *_count* and *_sum*.  
-The _count metric counts the total nr of times that the event has been observed.
+The _count metric counts the total number of times that the event has been observed.
 The _sum is a sum of all the observed values.
 The gauges are used to keep track of [quantiles](https://www.statisticshowto.com/quantile-definition-find-easy-steps/).
 
-When monitoring appications, you use summaries to keep track of the duration of operations, i.e. serving a request.
-Also, in combination with that you are tipically interested in the 0.5, 0.9 and 0.95 quantiles. 
+When monitoring applications, you use summaries to keep track of the duration of operations, i.e. serving a request.
+Also, in combination with that you are typically interested in the 0.5, 0.9 and 0.95 quantiles. 
 In simple terms, this will tell you: how long your application takes to fulfill incoming requests 
 in 95%, 90% and 50% of the cases. 
 
@@ -50,7 +50,7 @@ Make a dashboard showing the 3 urls that have the lowest average call duration *
 
 This type of metric is very similar to the summary. The histogram has a _count and _sum too, plus optional counters instead of gauges. 
 The counters are called *buckets* and are limited by an upper bound (inclusive). 
-The buckets are used to count the total number of events that occured within that boundary. 
+The buckets are used to count the total number of events that occurred within that boundary. 
 The buckets are named after the summary name with the *_bucket* suffix and they have a label *le* (short for less or equal) 
 that shows the upper bound.
 By default, Prometheus creates a bucket with upper bound +infinite, that corresponds to the _count metric, so the total count of events.

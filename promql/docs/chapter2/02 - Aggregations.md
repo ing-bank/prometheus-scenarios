@@ -12,7 +12,7 @@ You can either aggregate over all labels or use *without(<labels>)* or *by(<labe
 The 'without' statement removes the given labels, the 'by' statement retains only the given labels. 
 
 When aggregating time series based on counters, make sure to take the rate() before aggregating.
-You can read a detailed explaination [here](https://www.robustperception.io/rate-then-sum-never-sum-then-rate).
+You can read a detailed explanation [here](https://www.robustperception.io/rate-then-sum-never-sum-then-rate).
 
 As an example, considering our demo api, the `avg(rate(logged_on_customers)[1m]) by (country)` would calculate an
 instant vector that tells us the average (per minute) number of logged on customers for each country.
@@ -38,7 +38,7 @@ Use a range of 1 minute.
   <summary>Show solution</summary>
 
   **Solution.** You should have filled in: ```topk(2, rate(api_request_count[1m]))```
-  You may wonder why you see 4 countries instead of 2. This happens because you are also viewwing the history of
+  You may wonder why you see 4 countries instead of 2. This happens because you are also viewing the history of
   this metric, so you see the top 2 at any point in time and Grafana shows a legend for all the lines it draws.
 </details>
 
