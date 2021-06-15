@@ -1,6 +1,6 @@
 # Prometheus Scenarios
 
-This repo contains a collection of learning scenarios. Each scenario is meant to teach a topic through explanation and practical exercices.
+This repo contains a collection of learning scenarios. Each scenario is meant to teach a topic through explanation and practical exercises.
 
 Currently available scenarios:
 - the [PromQL](promql/README.md) scenario is meant to teach how to use Grafana and PromQL to create dashboards

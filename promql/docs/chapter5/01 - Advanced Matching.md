@@ -16,7 +16,7 @@ method_code:http_errors:rate5m{code="500"} / ignoring(code) method:http_requests
 method_code:http_errors:rate5m{code="500"} / on(method) method:http_requests:rate5m
 ```
 
-### Assignemnt
+### Assignment
 Make a graph showing the percentage of api requests that responded with an error.
 Do this in one query and use `api_response_status_count` and `api_request_count`.
 
