@@ -43,7 +43,7 @@ If everything went ok, you are now able to access the applications:
 - Grafana [http://localhost:3000/](http://localhost:3000/)
 - Prometheus [http://localhost:9090/](http://localhost:9090/)
 
-You are ready to go, the course starts from [this page](docs/index.md).
+You are ready to go, the course starts from [this page](docs/).
 
 ## How to add content
 
