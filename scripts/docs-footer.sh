@@ -62,7 +62,7 @@ while read -r -d ',' chap ; do
     files=()
     while read -r -d ',' f ; do
         files+=("$f")
-    done <<<$(ls -1 "$docs_dir" | grep ".md" | grep -v "README" | sort | tr '\n' ',')
+    done <<<$(ls -1 "$docs_dir" | grep -e "^[0-9].*\.md" | sort | tr '\n' ',')
     len=${#files[@]}
     for (( i=0; i<$len; i++ )); do
         f=${files[$i]}
