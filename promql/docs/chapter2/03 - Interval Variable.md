@@ -26,4 +26,5 @@ to become less than values that actually yield results.
   * Use the minimal step size to ensure that the graph stays functioning when zoomed in very far
   * Adjust the graph so that it shows all information in the graph even when zoomed out very far
 
-
+---
+## [< previous](02%20-%20Aggregations.md) | [next >](promql%2Fdocs)
