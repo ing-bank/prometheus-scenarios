@@ -32,3 +32,5 @@ Add the `up` metric and execute the query.
 Note that the legend (just below the graph) shows the metric name with its label names and values. 
 This metric has two labels that will be added by Prometheus to all the metrics that scrapes, this way you always know where
 the metric comes from.
+
+[Previous](README.md) | [Next](02 - Panel Info.md)
