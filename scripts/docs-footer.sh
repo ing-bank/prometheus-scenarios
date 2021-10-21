@@ -43,6 +43,8 @@ print_footer() {
     mv "$tmp" "$file"
 }
 
+# import common
+source "$(dirname $0)/common.sh"
 
 
 if [ -z "$1" ]; then

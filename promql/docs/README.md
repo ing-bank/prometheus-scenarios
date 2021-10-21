@@ -1,7 +1,7 @@
 # Welcome!
 
 In this scenario you will learn the basics of monitoring using Prometheus and Grafana.  
-
+You will follow the documentation directly on Github and do the exercises on your local machine.
 You will use Grafana to get insights from Prometheus metrics. 
 The scenario is divided in explanations and assignments that aim 
 to teach you how to use Grafana to query Prometheus using PromQL and make great dashboards.
