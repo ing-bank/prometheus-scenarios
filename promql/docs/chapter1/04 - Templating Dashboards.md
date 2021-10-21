@@ -19,11 +19,11 @@ Variables also have a *refresh* setting that tells Grafana how often it has to f
 This is often overlooked and causes some headaches.
 
 ## Assignment
-1. Create a Variable for the label `country`. _Tip: variables have a Datasource too_
-   2. make sure you select the `all` and `multi value` options too
-2. Change the dashboard to show a graph for each country. 
-3. Each graph should display only the line that corresponds to its country. _Tip: this option is called repeat_
-4. Add the variable to the title of the graph too.
+1. Create a Variable for the label `country`. _Tip: variables have a Datasource too_  
+    a. make sure you select the `all` and `multi value` options too
+1. Change the dashboard to show a graph for each country. 
+1. Each graph should display only the line that corresponds to its country. _Tip: this option is called repeat_
+1. Add the variable to the title of the graph too.
 
 _N.B. Grafana has a non-intuitive behavior with regards to the variables.
 When you make changes to a graph using the repeat option, only the first one is editable.
