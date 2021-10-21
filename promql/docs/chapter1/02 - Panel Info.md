@@ -27,6 +27,9 @@ means that Grafana tries to plot every data point to a pixel. With 1/2 Grafana w
 By changing the resolution, you can smoothen the lines on the graph. 
 
 ## Conclusion
-By adjusting the title, labels and/or a proper units of you will help your users making sense
+By adjusting the title, labels and/or a proper units of you will help your users making sense of your graphs.
+
+
+
 ---
 ## [< previous](01%20-%20Intro%20Grafana%20Prom%20QL.md) | [next >](03%20-%20Label%20Operators.md)

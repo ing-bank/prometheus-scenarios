@@ -83,14 +83,16 @@ Show each result in a different panel.
 
 <details>
     <summary>Show solution</summary>
-
-    **Solution**. You should have created a variable called service with value:
-    `label_values(service)`.
+    <p>
+    **Solution**. You should have created a variable called service with value: `label_values(service)`.
+    </p>
     You should have filled in 3 queries:
     ```
     histogram_quantile(0.5, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
     histogram_quantile(0.9, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
     histogram_quantile(0.95, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
     ```
+</details>
+
 ---
 ## [< previous](README.md) | [next >](promql%2Fdocs)

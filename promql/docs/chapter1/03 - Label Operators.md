@@ -18,5 +18,7 @@ For example: `up{ job=~"^.*demo.*$" }`. This will guarantee that your regex is n
 by different interpreters.
 
 ## Assignment
+
+
 ---
 ## [< previous](02%20-%20Panel%20Info.md) | [next >](04%20-%20Templating%20Dashboards.md)

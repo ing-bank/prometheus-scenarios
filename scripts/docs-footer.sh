@@ -20,8 +20,12 @@ print_footer() {
     footer_line=$(grep -n -e "^[-][-][-]" "${file}" || echo "${nl}:" )
     footer_line_nr=$(echo $footer_line | cut -d ':' -f1)
     footer_len=$(($nl - $footer_line_nr + 1))
+    if [ -z "$(tail -n $(($footer_len+1)) "$file" | head -1)" ] ; then
+        footer_len=$(($footer_len+1))
+    fi
     head -n "$(($nl - $footer_len ))" "${file}" > "$tmp"
-    echo -n """---
+    echo -n """
+---
 ## [< previous]($prev) | [next >]($next)
 """ >> "$tmp"
     mv "$tmp" "$file"
