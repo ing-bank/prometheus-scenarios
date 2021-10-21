@@ -23,8 +23,8 @@ Do this in one query and use `api_response_status_count` and `api_request_count`
 <details>
   <summary>Show solution</summary>
 
-  **Solution**. You should have filled in: 
-  ```sum(rate(api_response_status_count{status="ERROR"}[5m])) by (country) / sum(rate(api_request_count[5m])) by (country)```
+  **Solution**. You should have filled in:  
+  ```api_response_status_count{status="ERROR"} / ignoring(status) api_request_count```
 </details>
 
 ## Many-to-one
@@ -42,7 +42,8 @@ Do this in one query and use `api_response_status_count` and `api_request_count`
   <summary>Show solution</summary>
 
   **Solution**.
-  You should have filled in: ```sum(rate(api_response_status_count[5m])) by (country,status) / ignoring(status) group_left sum(rate(api_request_count[5m])) by (country) ```
+  You should have filled in:  
+  ```sum(rate(api_response_status_count[5m])) by (country,status) / ignoring(status) group_left sum(rate(api_request_count[5m])) by (country) ```
 </details>
 
 

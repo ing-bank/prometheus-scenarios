@@ -20,6 +20,7 @@ in 95%, 90% and 50% of the cases.
 
 The demo api exposes a metric called *api_request_duration_seconds* that has a label *url* and provides the 50%, 90% and 95% 
 quantiles. This will result in the following 5 time series for each function:
+
 ```
 api_request_duration_seconds_count{url="some-url"}
 api_request_duration_seconds_sum{url="some-url"}
@@ -32,15 +33,13 @@ api_request_duration_seconds{url="some-url",quantile="0.95"}
 Make a dashboard showing the 3 urls that have the lowest average call duration *in the last minute* at any given time.
 
 <details>
-    <summary>Show solution</summary>
+  <summary>Show solution</summary>
+
+  **Solution**. You should have filled in:
+  You should have filled in:  ```bottomk(3,rate(api_request_duration_seconds_sum[1m]) / rate(api_request_duration_seconds_count[1m]))```
     
-    **Solution.**  
-    You should have filled in: 
-    `bottomk(3,rate(api_request_duration_seconds_sum[1m]) / rate(api_request_duration_seconds_count[1m]))`
-    
-    Since api_request_duration_seconds_sum and api_request_duration_seconds are counters, you need to use the rate function
-    to be able to divide their values in the last minute. That gives you the average per url. 
-    The `bottomk` function return only the n lowest values.
+  Since api_request_duration_seconds_sum and api_request_duration_seconds are counters, you need to use the rate function
+  to be able to divide their values in the last minute. That gives you the average per url. The `bottomk` function returns only the `k` lowest values.
 
 </details>
 
@@ -82,16 +81,17 @@ Make a dashboard showing the median (50-percentile), 90-percentile and 95-percen
 Show each result in a different panel.
 
 <details>
-    <summary>Show solution</summary>
-    **Solution**.  
-    You should have created a variable called service with value: `label_values(service)`.  
+  <summary>Show solution</summary>
 
-    You should have filled in 3 queries:
-    ```
-    histogram_quantile(0.5, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
-    histogram_quantile(0.9, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
-    histogram_quantile(0.95, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
-    ```
+  **Solution**.  
+  You should have created a variable called service with value: `label_values(service)`.  
+
+  You should have filled in 3 queries:
+  ```
+  histogram_quantile(0.5, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
+  histogram_quantile(0.9, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
+  histogram_quantile(0.95, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
+  ```
 </details>
 
 ---
