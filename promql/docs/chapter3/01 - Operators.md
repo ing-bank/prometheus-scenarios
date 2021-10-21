@@ -26,7 +26,7 @@ Use the api_request_count to show the rate of logged on customers multiplied by 
   <summary>Show solution</summary>
   
   **Solution**. You should have filled in: ```rate(api_request_count[1m])*10```
-
+</details>
 
 ---
 ## [< previous](README.md) | [next >](02%20-%20Filtering.md)

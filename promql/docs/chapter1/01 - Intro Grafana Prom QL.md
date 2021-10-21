@@ -33,7 +33,5 @@ Note that the legend (just below the graph) shows the metric name with its label
 This metric has two labels that will be added by Prometheus to all the metrics that scrapes, this way you always know where
 the metric comes from.
 
-
-
 ---
 ## [< previous](README.md) | [next >](02%20-%20Panel%20Info.md)
