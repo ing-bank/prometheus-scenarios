@@ -19,7 +19,6 @@ This scenario is divided in chapters which cover the following topics:
 1. Chapter 5
     1. PromQL Advanced Matching
 
-
 ## Students
 
 To follow this course, you will need a laptop with [Docker](https://www.docker.com/get-started) installed.
@@ -40,10 +39,11 @@ $: set PROMQLWD="path\\to\\promql\\folder"
 $: docker-compose up
 ```
 
-If everything went ok, you will be able to access the applications:
+If everything went ok, you are now able to access the applications:
 - Grafana [http://localhost:3000/](http://localhost:3000/)
 - Prometheus [http://localhost:9090/](http://localhost:9090/)
-- Textbook [http://localhost:3080/](http://localhost:3080/)
+
+You are ready to go, the course starts from [this page](docs/).
 
 ## How to add content
 

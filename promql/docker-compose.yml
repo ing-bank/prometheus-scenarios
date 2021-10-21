@@ -22,12 +22,6 @@ services:
       - "8080:8080"
     networks:
       - promql-net
-  docs:
-    image: dannyben/madness:0.9.3
-    ports: 
-      - "3080:3000"
-    volumes:
-      - ${PROMQLWD}/docs:/docs
 
 networks:
   promql-net:

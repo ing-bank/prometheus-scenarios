@@ -62,3 +62,6 @@ but smoothed out as an average of the last 5 minutes.
 ## Other Aggregators
 We can't cover all the aggregators here. We will focus on the easiest. For a complete list, 
 see [Prometheus docs](https://prometheus.io/docs/prometheus/latest/querying/operators/#aggregation-operators).
+
+---
+## [< previous](01%20-%20Using%20Functions.md) | [next >](03%20-%20Interval%20Variable.md)

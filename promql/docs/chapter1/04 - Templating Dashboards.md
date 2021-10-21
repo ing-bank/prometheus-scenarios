@@ -35,6 +35,8 @@ This is often overlooked and causes some headaches.
   1. You should have changed the query in the the panel: `logged_on_customers{country=~"^$country$"}`  
   1. In the general tab of your panel you can find the repeat option. The dropdown value should be set to `country`  
   1. In the same tab, you should have set title of the dashboard to: `Logged on Customers $country`.  
-  
-
 </details>
+
+
+---
+## [< previous](03%20-%20Label%20Operators.md) | [next >](..)

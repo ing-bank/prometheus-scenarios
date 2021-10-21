@@ -27,3 +27,6 @@ to become less than values that actually yield results.
   * Adjust the graph so that it shows all information in the graph even when zoomed out very far
 
 
+
+---
+## [< previous](02%20-%20Aggregations.md) | [next >](..)

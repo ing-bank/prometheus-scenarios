@@ -19,3 +19,6 @@ by different interpreters.
 
 ## Assignment
 Adjust the dashboard so that it does not show the number of customers for the country 'nl'.
+
+---
+## [< previous](02%20-%20Panel%20Info.md) | [next >](04%20-%20Templating%20Dashboards.md)

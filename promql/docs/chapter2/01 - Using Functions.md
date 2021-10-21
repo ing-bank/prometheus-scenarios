@@ -83,3 +83,6 @@ Use a range of 1 minute.
   **Solution**. You should have filled in: ```rate(api_request_count[1m])```
 </details>
 
+
+---
+## [< previous](README.md) | [next >](02%20-%20Aggregations.md)
