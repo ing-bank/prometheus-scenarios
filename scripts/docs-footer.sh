@@ -10,22 +10,6 @@ usage() {
 """
 }
 
-urlencode() {
-    # urlencode <string>
-    old_lc_collate=$LC_COLLATE
-    LC_COLLATE=C
-
-    local length="${#1}"
-    for (( i = 0; i < length; i++ )); do
-        local c="${1:$i:1}"
-        case $c in
-            [a-zA-Z0-9.~_-]) printf '%s' "$c" ;;
-            *) printf '%%%02X' "'$c" ;;
-        esac
-    done
-
-    LC_COLLATE=$old_lc_collate
-}
 
 print_footer() {
     file="$1"
@@ -43,14 +27,17 @@ print_footer() {
     mv "$tmp" "$file"
 }
 
-# import common
-source "$(dirname $0)/common.sh"
 
-
+#
+# MAIN LOGIC
+#
 if [ -z "$1" ]; then
     usage
     exit 1
 fi
+
+# import common
+source "$(dirname $0)/common.sh"
 
 SCENARIO_DOCS="$1/docs"
 CI="0"

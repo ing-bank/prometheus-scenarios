@@ -4,10 +4,14 @@ urlencode() {
     # urlencode <string>
     old_lc_collate=$LC_COLLATE
     LC_COLLATE=C
+    s="$1"
+    if [ -z "$s" ]; then
+        read -r s
+    fi
+    local length="${#s}"
 
-    local length="${#1}"
     for (( i = 0; i < length; i++ )); do
-        local c="${1:$i:1}"
+        local c="${s:$i:1}"
         case $c in
             [a-zA-Z0-9.~_-]) printf '%s' "$c" ;;
             *) printf '%%%02X' "'$c" ;;
