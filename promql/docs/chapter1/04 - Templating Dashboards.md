@@ -39,4 +39,4 @@ This is often overlooked and causes some headaches.
 
 
 ---
-## [< previous](03%20-%20Label%20Operators.md) | [next >](promql%2Fdocs)
+## [< previous](03%20-%20Label%20Operators.md) | [next >](..)

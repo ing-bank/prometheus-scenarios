@@ -41,4 +41,4 @@ Adjust the previous graph with api_request_count to only show a value where it i
 
 
 ---
-## [< previous](01%20-%20Operators.md) | [next >](promql%2Fdocs)
+## [< previous](01%20-%20Operators.md) | [next >](..)

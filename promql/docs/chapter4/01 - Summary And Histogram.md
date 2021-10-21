@@ -33,15 +33,15 @@ Make a dashboard showing the 3 urls that have the lowest average call duration *
 
 <details>
     <summary>Show solution</summary>
-    <p>
-    **Solution.** You should have filled in: 
+    
+    **Solution.**  
+    You should have filled in: 
     `bottomk(3,rate(api_request_duration_seconds_sum[1m]) / rate(api_request_duration_seconds_count[1m]))`
-    </p>
-    <p>
+    
     Since api_request_duration_seconds_sum and api_request_duration_seconds are counters, you need to use the rate function
     to be able to divide their values in the last minute. That gives you the average per url. 
     The `bottomk` function return only the n lowest values.
-    </p>
+
 </details>
 
 
@@ -83,9 +83,9 @@ Show each result in a different panel.
 
 <details>
     <summary>Show solution</summary>
-    <p>
-    **Solution**. You should have created a variable called service with value: `label_values(service)`.
-    </p>
+    **Solution**.  
+    You should have created a variable called service with value: `label_values(service)`.  
+
     You should have filled in 3 queries:
     ```
     histogram_quantile(0.5, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
@@ -95,4 +95,4 @@ Show each result in a different panel.
 </details>
 
 ---
-## [< previous](README.md) | [next >](promql%2Fdocs)
+## [< previous](README.md) | [next >](..)

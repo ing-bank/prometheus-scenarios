@@ -29,4 +29,4 @@ to become less than values that actually yield results.
 
 
 ---
-## [< previous](02%20-%20Aggregations.md) | [next >](promql%2Fdocs)
+## [< previous](02%20-%20Aggregations.md) | [next >](..)

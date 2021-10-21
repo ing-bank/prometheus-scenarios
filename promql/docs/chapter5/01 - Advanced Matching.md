@@ -47,4 +47,4 @@ Do this in one query and use `api_response_status_count` and `api_request_count`
 
 
 ---
-## [< previous](README.md) | [next >](promql%2Fdocs)
+## [< previous](README.md) | [next >](..)
