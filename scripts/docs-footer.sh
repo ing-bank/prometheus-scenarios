@@ -62,7 +62,7 @@ while read -r -d ',' chap ; do
         echo "### Editing ${f}"
         # if file is last then next points to next chapter
         if [ $i -eq $(($len-1)) ]; then
-            next=$(urlencode $SCENARIO_DOCS)
+            next=$(urlencode "..")
         else
             ni=$(($i+1))
             next=$(urlencode "${files[$ni]}")
