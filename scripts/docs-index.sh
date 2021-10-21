@@ -30,8 +30,9 @@ while read -r -d ',' chap ; do
     content="# Chapter $I  "$'\n'
     while read -r -d ',' f ; do
         url=$(urlencode "$f")
-        content="${content}[${f}]($url)  "$'\n'
-    done <<<$(ls -1 "$chap_dir" | grep -e "^[0-9].*\.md" | sort | sed 's/^\(.*\)[.]md$/\1/' | tr '\n' ',')
+        name=$(echo "$f" | sed 's/^\(.*\)[.]md$/\1/')
+        content="${content}[${name}]($url)  "$'\n'
+    done <<<$(ls -1 "$chap_dir" | grep -e "^[0-9].*\.md" | sort | tr '\n' ',')
 
     echo "$content" > $rf
     I=$((I+1))
