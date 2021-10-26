@@ -8,5 +8,5 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: '1.17.2'
-      - run: build.sh
+      - run: ./build.sh
         working-directory: monitoring-demo-api
