@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/google/logger"
-	"github.com/jberny/monitoring-demo-api/api/controller"
+	"github.com/ing-bank/prometheus-scenarios/monitoring-demo-api/api/controller"
 )
 
 func handleSignals() {

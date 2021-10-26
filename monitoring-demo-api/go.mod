@@ -1,4 +1,4 @@
-module github.com/jberny/monitoring-demo-api
+module github.com/ing-bank/prometheus-scenarios/monitoring-demo-api
 
 go 1.14
 

@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/google/logger"
-	"github.com/jberny/monitoring-demo-api/api/internal/handler"
+	"github.com/ing-bank/prometheus-scenarios/monitoring-demo-api/api/internal/handler"
 
 	"github.com/gorilla/mux"
 )

@@ -1,7 +1,7 @@
 package metric
 
 import (
-	"github.com/jberny/monitoring-demo-api/pkg/generator"
+	"github.com/ing-bank/prometheus-scenarios/monitoring-demo-api/pkg/generator"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

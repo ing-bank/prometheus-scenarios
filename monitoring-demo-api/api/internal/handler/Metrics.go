@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jberny/monitoring-demo-api/pkg/engine"
-	"github.com/jberny/monitoring-demo-api/pkg/generator"
-	"github.com/jberny/monitoring-demo-api/pkg/metric"
+	"github.com/ing-bank/prometheus-scenarios/monitoring-demo-api/pkg/engine"
+	"github.com/ing-bank/prometheus-scenarios/monitoring-demo-api/pkg/generator"
+	"github.com/ing-bank/prometheus-scenarios/monitoring-demo-api/pkg/metric"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

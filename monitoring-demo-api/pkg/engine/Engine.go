@@ -3,7 +3,7 @@ package engine
 import (
 	"time"
 
-	"github.com/jberny/monitoring-demo-api/pkg/metric"
+	"github.com/ing-bank/prometheus-scenarios/monitoring-demo-api/pkg/metric"
 )
 
 // Opts contains options to configure the engine.Run
