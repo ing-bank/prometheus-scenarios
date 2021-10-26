@@ -15,8 +15,3 @@ This is a gauge that generates random values to simulate a load of requests on t
 
 ### Api Request Duration Seconds
 This is a summary that represents the total time in seconds that it takes to the api to fulfill a request.
-
-## Development
-set the GOPRIVATE=github.com/jberny
-
-build with the build.sh script or usign the docker file.
