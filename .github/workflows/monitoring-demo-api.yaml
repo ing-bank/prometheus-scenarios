@@ -11,14 +11,11 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: '1.17.2'
-      - name: Create build directory
-        run: mkdir build
-        working-directory: monitoring-demo-api
       - name: Compile
         run: ./build.sh
         working-directory: monitoring-demo-api
       - name: Debug Build
-        run: ls -l build
+        run: ls -l .build
         working-directory: monitoring-demo-api
       - uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
