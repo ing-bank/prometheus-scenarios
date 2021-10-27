@@ -1,7 +1,7 @@
 version: "3.6"
 services:
   grafana:
-    image: grafana/grafana:7.5.11
+    image: grafana/grafana:8.2.2
     ports:
       - "3000:3000"
     networks:
@@ -17,7 +17,7 @@ services:
     volumes:
       - ${PROMQLWD}/assets/prometheus:/etc/prometheus
   mondemoapi:
-    image: ghcr.io/ing-bank/prometheus-scenarios/monitoring-demo-api:v0.0.7
+    image: ghcr.io/ing-bank/prometheus-scenarios/monitoring-demo-api:v0.0.10
     ports:
       - "8080:8080"
     networks:
