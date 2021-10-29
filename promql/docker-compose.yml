@@ -17,7 +17,7 @@ services:
     volumes:
       - ${PROMQLWD}/assets/prometheus:/etc/prometheus
   mondemoapi:
-    image: ghcr.io/ing-bank/prometheus-scenarios/monitoring-demo-api:v0.0.10
+    image: ghcr.io/ing-bank/prometheus-scenarios/monitoring-demo-api:latest
     ports:
       - "8080:8080"
     networks:
