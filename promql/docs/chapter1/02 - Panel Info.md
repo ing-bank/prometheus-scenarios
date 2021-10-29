@@ -7,7 +7,7 @@ information about what is shown in the panel.
 
 ### Assignment 
 1. Change the query to `logged_on_customers`
-1. On the right of the screen under **Panel options` there is a `Title` option. Change the title to "Logged on customers". There is also a description field available to enter more information, when this is used a `i` will be shown in the top-left corner of your panel. Hovering over that `i` will show the description entered.
+1. On the right of the screen under **Panel options** there is a **Title** option. Change the title to "Logged on customers". There is also a description field available to enter more information, when this is used a `i` will be shown in the top-left corner of your panel. Hovering over that `i` will show the description entered.
 
 ## Legend
 You might have noticed that your legend for the **logged_on_customers** metric looks messy. That happened because Prometheus gives
