@@ -14,12 +14,13 @@ If this is still unclear, try to this of the quantile as an answer to the follow
 what's the number in the given set of data that is greater than X percent of the values in the set.
 For example, you need to find the 0.2 quantile to know the value in a set that is greater than 20% of the values in the set.
 
-You can use both histograms and summaries to calculate quantiles. 
-The main consideration is that summaries are more expensive for the client.
+You can use both histograms and summaries to calculate quantiles. Summaries determine the quantiles on the client, but the
+given quantiles cannot be aggregated anymore. Histograms let the server do more work for determining a quantile, but they
+can be aggregated.
 See the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/#quantiles) for more details.
 
 ## Summary
-Summary metrics are used to track the size of events. Usually, how long they take (e.g. a request-response duration). 
+Summary metrics are used to track the values of events. For API monitoring you will often see this for a request-response duration.
 It consists of two counters, and some optional gauges. 
 Mind that these are **all different metrics** even though they belong to the same summary. 
 The two counters are named after the summary with the suffix *_count* and *_sum*.  
