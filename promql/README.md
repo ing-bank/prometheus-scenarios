@@ -27,9 +27,7 @@ To start the learning environment, you need to execute the following commands.
 
 For linux/mac:
 ```bash
-$: cd path/to/promql/folder
-$: export PROMQLWD="path/to/promql/folder"
-$: docker-compose up
+$: ./start-learning-environment.sh
 ```
 
 For Windows:
