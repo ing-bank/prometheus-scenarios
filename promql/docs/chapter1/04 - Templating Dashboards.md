@@ -34,7 +34,7 @@ You need to select one value and then select them all again to refresh all the g
 <details>
   <summary>Show solution</summary>
 
-  **Solution**.  
+  **Solution**.
 
   1. You can create variables by clicking the settings button (gear icon) in your dashboard and then select variables
   from the menu. Create a variable called `country` with query: `label_values(country)`.  Enable the `All` option.

@@ -26,7 +26,7 @@ Adjust the dashboard so that it does not show the number of customers for the co
 <details>
   <summary>Show solution</summary>
 
-  **Solution**.  
+  **Solution**.
 
   1. Enter `logged_on_customers{ country!="nl" }` for the query.
 </details>

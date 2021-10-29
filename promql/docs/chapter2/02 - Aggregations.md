@@ -1,5 +1,5 @@
 # Aggregations
-**Objective:** learn how to user aggregators.
+**Objective:** learn how to use aggregators.
 
 ## Sum, Min, Max and Avg
 Aggregators allow you to calculate a new vector from an existing one.
@@ -28,7 +28,7 @@ Use a range of 1 minute.
 </details>
 
 ## TopK and BottomK
-The *topk* and *bottomk* operators are used to get the highest and lowest k time series in the metric respectively.
+The *topk* and *bottomk* operators are used to get the highest and lowest k samples in a instant vector for the metric respectively.
 
 ### Assignment
 Make a dashboard showing a per-second rate of number api request for the two countries with the highest number of requests.

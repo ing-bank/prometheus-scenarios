@@ -25,7 +25,7 @@ Adjust the dashboard to show only the country code in the legend
 <details>
   <summary>Show solution</summary>
 
-  **Solution**.  
+  **Solution**.
 
   1. Enter `{{ country }}` for the legend.
 </details>
