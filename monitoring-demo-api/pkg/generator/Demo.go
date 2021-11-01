@@ -45,7 +45,7 @@ type RequestDuration struct {
 func (a RequestDuration) NextVal() float64 {
 	result := rand.NormFloat64() * a.Deviation + a.Mean
 	if result < 0 {
-		result := 0
+		return 0
 	}
 	return result
 }
