@@ -48,6 +48,7 @@ var metrics = metric.Metrics{
 			[]string{"country"},
 		),
 		Generator: generator.Rand{Max: 30},
+		Observations: 1,
 		Labels: combine([]string{""}, labels["country"]),
 	},
 	metric.Metric{
@@ -59,6 +60,7 @@ var metrics = metric.Metrics{
 			[]string{"status", "country"},
 		),
 		Generator: generator.Rand{Max: 23},
+		Observations: 1,
 		Labels:    combine(labels["status"], labels["country"]),
 	},
 	metric.Metric{
@@ -70,6 +72,7 @@ var metrics = metric.Metrics{
 			[]string{"country"},
 		),
 		Generator: generator.NewLoggedOnCustomers(),
+		Observations: 1,
 		Labels: combine([]string{""}, labels["country"]),
 	},
 	metric.Metric{
@@ -77,11 +80,15 @@ var metrics = metric.Metrics{
 			prometheus.SummaryOpts{
 				Help:       "Total time in seconds that it takes to the api to fulfill a request",
 				Name:       "api_request_duration_seconds",
-				Objectives: map[float64]float64{0.99: 0.1, 0.95: 0.2, 0.5: 0.3},
+				Objectives: map[float64]float64{0.99: 0.1, 0.95: 0.1, 0.5: 0.1},
 			},
 			[]string{"url"},
 		),
-		Generator: generator.APIRequestDuration{},
+		Generator: generator.RequestDuration{
+			Mean: 1.3,
+			Deviation: 0.5,
+		},
+		Observations: 80,
 		Labels: combine([]string{""}, labels["url"]),
 	},
 	metric.Metric{
@@ -89,14 +96,15 @@ var metrics = metric.Metrics{
 			prometheus.HistogramOpts{
 				Help:    "Total time in seconds that it takes to invoke a service and receive a response",
 				Name:    "service_request_duration_seconds",
-				Buckets: []float64{0.1, 0.2, 0.5},
+				Buckets: []float64{0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
 			},
 			[]string{"service"},
 		),
-		Generator: generator.ServiceRequestDuration{
-			Mean: 0.8,
-			Deviation: 9,
+		Generator: generator.RequestDuration{
+			Mean: 0.4,
+			Deviation: 0.2,
 		},
+		Observations: 80,
 		Labels: combine([]string{""}, labels["service"]),
 	},
 }

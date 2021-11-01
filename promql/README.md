@@ -23,13 +23,11 @@ This scenario is divided in chapters which cover the following topics:
 
 To follow this course, you will need a laptop with [Docker](https://www.docker.com/get-started) installed.
 
-To start the learning environment, you need to execute the following commands.
+To start the learning environment, you need to execute the following commands (make sure that your docker environment is running beforehand).
 
 For linux/mac:
 ```bash
-$: cd path/to/promql/folder
-$: export PROMQLWD="path/to/promql/folder"
-$: docker-compose up
+$: ./start-learning-environment.sh
 ```
 
 For Windows:

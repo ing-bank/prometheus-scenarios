@@ -31,7 +31,7 @@ Do this in one query and use `api_response_status_count` and `api_request_count`
 If you want the same to be done for each status code, you will need something more. Grouping comes to the rescue. Rewriting the query with 'group_left':
 *method_code:http_errors:rate5m / ignoring(code) group_left method:http_requests:rate5m
 
-The above will result in a fraction for each error code. The alternative is 'group_right' you need to use this  when there are more than one series on the right side of the operator.
+The above will result in a fraction for each status code. The alternative is 'group_right' you need to use this  when there are more than one series on the right side of the operator.
 
 ### Assignment
 Make a dashboard that shows the percentage of all api request statuses for each country.

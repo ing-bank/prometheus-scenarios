@@ -14,12 +14,21 @@ you will get more accurate results with a larger range.
 For this demo, we set a scrape interval of 10s. Thus our Prometheus instance will collect 3 values every 30 seconds (30/10=3).
 So a range of one minute is good enough for our demo.
 Normally, you would have to configure this in Prometheus yourself. In case you don't know what's the value
-you can see it in Prometheus UI under the Status menu, in the Configuration tab.
+you can see it in Prometheus UI under the Status menu, in the [Configuration tab](http://localhost:9090/config).
 
 ## Assignment
 You can see the difference by using the query directly in Prometheus.
 Go to the [Prometheus](http://localhost:9090/) 
 web interface, query the `up` metric with and without range selector and observe the difference.
+
+<details>
+  <summary>Show solution</summary>
+
+  **Solution**.
+
+  1. Enter `up` for the query. The resulting table shows one row for `up{instance="mondemoapi:8080", job="mondemoapi"}` with value 1.
+  1. Enter `up[1m]` for the query. The resulting table shows one row for `up{instance="mondemoapi:8080", job="mondemoapi"}` with 6 samples at different times.
+</details>
 
 
 ## Counters and Gauges
@@ -38,7 +47,7 @@ Delta shows you the *difference* between two points in time where the two values
 These two values are selected based on the given time frame (e.g. 1 min). 
 On the other hand, deriv(v range-vector) calculates the per-second *derivative* of the time series in a range vector v,
 using simple linear regression. In other words, deriv calculates the slope of the graph.
-The idelta function is somewhat less useful as it depends on the scrape interval in order to give it meaning.
+The idelta function shows the difference between the last two scrapes in a scrape interval.
 
 When monitoring an application, you may be interested in the number of users currently using you application.
 Gauges are a good tool to measure it. The demo api has a metric called *logged_on_customers* that simulates exactly that.
@@ -69,7 +78,8 @@ Otherwise, the value will fluctuate wildly and will make your graph hard to read
 For monitoring you would often be interested in the load on a system. 
 That is more directly related to the number (or count) of incoming requests. 
 Counters suit to this purpose because their current value is the sum of all previous measurements,
-unless your application stopped or restarted (in that case they are set back to zero).
+unless your application stopped or restarted (in that case they are set back to zero). The rate() and irate()
+functions expect this behaviour from a counter and handle it properly.
 
 The demo api exposes a metric called *api_request_count* that simulates a measurement of the number of incoming requests.
 
