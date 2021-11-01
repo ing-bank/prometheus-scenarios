@@ -86,7 +86,7 @@ var metrics = metric.Metrics{
 		),
 		Generator: generator.RequestDuration{
 			Mean: 1.3,
-			Deviation: 0.5
+			Deviation: 0.5,
 		},
 		Observations: 15,
 		Labels: combine([]string{""}, labels["url"]),
