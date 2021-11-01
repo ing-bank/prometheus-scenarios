@@ -96,7 +96,7 @@ var metrics = metric.Metrics{
 			prometheus.HistogramOpts{
 				Help:    "Total time in seconds that it takes to invoke a service and receive a response",
 				Name:    "service_request_duration_seconds",
-				Buckets: []float64{0.1, 0.2, 0.3, 0.4, 0.5, 0.6},
+				Buckets: []float64{0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
 			},
 			[]string{"service"},
 		),
