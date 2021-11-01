@@ -17,7 +17,7 @@ func Run(o Opts) {
 	go func() {
 		for {
 			for _, lbls := range o.Metric.Labels {
-				for i := 0; i < o.Metric.Observations; i++ {
+				for i := uint(0); i < o.Metric.Observations; i++ {
 					val := o.Metric.Generator.NextVal()
 					alterMetric(o.Metric, val, lbls)
 				}
