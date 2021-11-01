@@ -33,7 +33,7 @@ For example, if your application received 5 requests which took 2 seconds each t
 will have a _count metric with the value 5 and an _sum metric with the value 10 (5 requests * 2 seconds).
 
 The demo api exposes a metric called *api_request_duration_seconds* that has a label *url* and provides the 50%, 90% and 95% 
-quantiles. This will result in the following 5 time series for each function:
+quantiles. This will result in the following 5 time series for each url:
 
 ```
 api_request_duration_seconds_count{url="some-url"}
@@ -90,7 +90,7 @@ service_request_duration_seconds{service="some-service",le="+Inf"}
 ```
 
 ### Assignment
-Make a dashboard showing the median (50-percentile), 90-percentile and 95-percentile of service_request_duration_seconds for the last 10 minutes. 
+Make a dashboard showing the median (50-percentile), 90-percentile and 95-percentile of service_request_duration_seconds for the last 10 minutes for each service.
 Show each result in a different panel.
 
 <details>
@@ -105,6 +105,8 @@ Show each result in a different panel.
   histogram_quantile(0.9, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
   histogram_quantile(0.95, sum(rate(service_request_duration_seconds_bucket{service=~"$service"}[10m])) by (le))
   ```
+
+  And your panel needs to have the **Repeat options** set to repeat on the `service` variable.
 </details>
 
 ---
