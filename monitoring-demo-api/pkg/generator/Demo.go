@@ -32,25 +32,20 @@ func (r LoggedOnCustomers) NextVal() float64 {
 	return math.Round(val + offset)
 }
 
-// APIRequestDuration demo generator, 
-// represents the total time in seconds that it takes to the api to fulfill a request
+// RequestDuration demo generator,
+// represents the total time in seconds that a request takes. This value is distributed as a
+// truncated normal distribution (negative values are nonsense and truncated to 0)
 // implements Generator interface
-type APIRequestDuration struct {}
-
-// NextVal returns next value 
-func (a APIRequestDuration) NextVal() float64 {
-	return rand.Float64()
-}
-
-// ServiceRequestDuration demo generator, 
-// represents the total time in seconds that it takes to the api to fulfill a request
-// implements Generator interface
-type ServiceRequestDuration struct {
+type RequestDuration struct {
 	Mean       float64
 	Deviation  float64
 }
 
 // NextVal returns next value 
-func (a ServiceRequestDuration) NextVal() float64 {
-	return rand.NormFloat64() * a.Deviation + a.Mean
+func (a RequestDuration) NextVal() float64 {
+	result = rand.NormFloat64() * a.Deviation + a.Mean
+	if result < 0 {
+		result = 0
+	}
+	return result
 }
