@@ -24,7 +24,7 @@ Use a range of 1 minute.
 <details>
   <summary>Show solution</summary>
   
-  **Solution.** The metric should have been: `sum(rate(api_response_status_count[1m]))`
+  **Solution.** The query should have been: `sum(rate(api_response_status_count[1m]))`
 </details>
 
 ## TopK and BottomK

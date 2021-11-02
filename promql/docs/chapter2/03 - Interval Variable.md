@@ -23,9 +23,22 @@ To counter that, you can specify the *minimal step size* instructing Grafana tha
 to become less than values that actually yield results.
 
 
-  * Use the minimal step size to ensure that the graph stays functioning when zoomed in very far
-  * Adjust the graph so that it shows all information in the graph even when zoomed out very far
+### Assignment
 
+  Use a graph with query: ```rate(service_request_duration_seconds_count[1m])```.
+
+  * Adjust the graph so that it shows all information in the graph even when zoomed out very far
+  * Use the minimal step size to ensure that the graph stays functioning when zoomed in very far
+
+<details>
+  <summary>Show solution</summary>
+
+  **Solution**.
+
+  1. You should have filled in: ```rate(service_request_duration_seconds_count[1m])```
+  1. You should have entered a minimal step size of ```15sec``` or more.
+
+</details>
 
 
 ---
