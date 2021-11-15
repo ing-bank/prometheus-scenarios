@@ -14,8 +14,8 @@ The 'without' statement removes the given labels, the 'by' statement retains onl
 When aggregating time series based on counters, make sure to take the rate() before aggregating.
 You can read a detailed explanation [here](https://www.robustperception.io/rate-then-sum-never-sum-then-rate).
 
-As an example, considering our demo api, the `avg(rate(logged_on_customers[1m])) by (country)` would calculate an
-instant vector that tells us the average (per minute) number of logged on customers for each country.
+As an example, considering our demo api, the `avg(logged_on_customers)` would calculate an
+instant vector that tells us the average (per minute) number of logged on customers over all countries.
 
 ### Assignment
 Use the metric *api_response_status_count* to make a dashboard showing a per-second rate of all 
@@ -24,7 +24,7 @@ Use a range of 1 minute.
 <details>
   <summary>Show solution</summary>
   
-  **Solution.** The metric should have been: `sum(rate(api_response_status_count[1m]))`
+  **Solution.** The query should have been: `sum(rate(api_response_status_count[1m]))`
 </details>
 
 ## TopK and BottomK

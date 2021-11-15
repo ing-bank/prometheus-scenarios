@@ -61,7 +61,7 @@ Use a range of 1 minute.
   <summary>Show solution</summary>
   <p>
 
-  **Solution**. You should have filled in: ```deriv(logged_on_customers{country="$country"}[1m])```
+  **Solution**. You should have filled in: ```deriv(logged_on_customers{country=~"$country"}[1m])```
   
   </p>
 </details>
@@ -84,15 +84,20 @@ functions expect this behaviour from a counter and handle it properly.
 The demo api exposes a metric called *api_request_count* that simulates a measurement of the number of incoming requests.
 
 ### Assignment
-Create a dashboard showing the number of requests per second for all countries.
+Create a dashboard showing the number of requests per second for each country.
 Use a range of 1 minute.
 
 <details>
   <summary>Show solution</summary>
   
-  **Solution**. You should have filled in: ```rate(api_request_count[1m])```
+  **Solution**.
+
+  1. You should have filled in: ```rate(api_request_count[1m])```
+
 </details>
 
+Now if you change the query to ```rate(api_request_count[5m])``` you may see some strange data in the graph where the environment was started. The load seemed to build
+up, however this is an artefact of how rate() works. The rate() function gives the average rate of increase for the given window but since the the first part of the window has no data points (neither Prometheus nor Demo Api was running) it will stretch the available data points over the entire time window, thus artifically lowering the results.
 
 ---
 ## [< previous](README.md) | [next >](02%20-%20Aggregations.md)
