@@ -61,7 +61,7 @@ Use a range of 1 minute.
   <summary>Show solution</summary>
   <p>
 
-  **Solution**. You should have filled in: ```deriv(logged_on_customers{country="$country"}[1m])```
+  **Solution**. You should have filled in: ```deriv(logged_on_customers{country=~"$country"}[1m])```
   
   </p>
 </details>
