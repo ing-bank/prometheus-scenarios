@@ -72,13 +72,27 @@ By default, Prometheus creates a bucket with upper bound +infinite. That corresp
 Prometheus has a function called [histogram_quantile](https://prometheus.io/docs/prometheus/latest/querying/functions/#histogram_quantile)
 that lets you calculate a quantile from and histogram. 
 For example, if you want the 90th percentile for an *service_request_duration_seconds* metric over a *10 minutes* window, you would write a query like:
-`histogram_quantile(0.9, rate(service_request_duration_seconds[10m]))`
-If this is still
+`histogram_quantile(0.9, rate(service_request_duration_seconds_bucket[10m]))`
 
 When monitoring applications, histograms are useful to see if your application meets specific objectives. 
 You can then use the value of the bucket divided by the total count to get the percentage of requests that matches the objective.
-In Prometheus terms this is called [Apdex Score](https://prometheus.io/docs/practices/histograms/#apdex-score), while site 
-reliability engineers usually call this Service Level Objective.
+An [Apdex score](https://en.wikipedia.org/wiki/Apdex) is an industry standard way of measuring the performance of an application and assigning a single score to it. If a user is satisfied when the request is served in 300ms, and performance is tolerable up to 800ms, our Apdex score can be calculated like so:
+
+```
+(
+  sum(rate(service_request_duration_seconds_bucket{le="0.3"}[5m])) by (service)
++
+  sum(rate(service_request_duration_seconds_bucket{le="0.8"}[5m])) by (service)
+) / 2 / sum(rate(service_request_duration_seconds_count[5m])) by (service)
+```
+
+If our SLO is that 95% of requests should be within 500ms, we can calculate the percentiles bases on our histogram buckets as follows:
+
+```
+sum(rate(service_request_duration_seconds_bucket{le="0.5"}[5m])) by (service)
+/
+sum(rate(service_request_duration_seconds_count[5m])) by (service)
+```
 
 The demo api has a histogram called `service_request_duration_seconds`, which results in the following metrics:
 ```
